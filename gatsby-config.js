@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://cscolley.github.io/",
+    siteUrl: "https://www.chriscolley.com.au/",
     title: "Portfolio",
   },
-  pathPrefix: "/cc-portfolio",
+  // pathPrefix: "/cc-portfolio",
   plugins: [
     "gatsby-plugin-styled-components",
     "gatsby-plugin-gatsby-cloud",
