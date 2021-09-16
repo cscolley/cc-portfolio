@@ -18,7 +18,7 @@ export const GlobalStyle = createGlobalStyle`
     :root {
     --width: 460px;
     --white: #fafafa;
-    --darkGrey: rgba(0, 0, 0, 0.87);
+    --darkGrey: rgba(28, 28, 28, 0.98);
     --paradisePink: #ed3d63;
     --palatinateBlue: #223ccf;
     --midnightBlue: #161b7f;
@@ -29,8 +29,6 @@ export const GlobalStyle = createGlobalStyle`
 
   * {
     box-sizing: border-box;
-    font-family: 'Digital7Mono', sans-serif;
-    color: var(--white);
   }
 
   body {

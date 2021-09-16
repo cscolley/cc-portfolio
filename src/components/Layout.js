@@ -1,12 +1,18 @@
 import React from "react";
-import { LayoutWrapper } from "./Layout.styles";
-import { GlobalStyle } from "../../styles/GlobalStyle";
+import { GlobalStyle } from "../styles/GlobalStyle";
+import styled from "styled-components";
+import Loader from "./Loader";
+
+export const LayoutWrapper = styled.div`
+  min-height: 100hv;
+`;
 
 const Layout = ({ children }) => {
   return (
     <>
       <LayoutWrapper>
         <GlobalStyle />
+        <Loader />
         {children}
       </LayoutWrapper>
     </>
