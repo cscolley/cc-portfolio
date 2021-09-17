@@ -19,7 +19,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-manifest",
       options: {
-        icon: "src/images/cclogo50x26.png",
+        icon: "src/images/cclogo-noborder60x20.png",
       },
     },
     "gatsby-transformer-remark",

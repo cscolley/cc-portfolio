@@ -55,10 +55,7 @@ const LogoDiv = styled(motion.div)`
   font-weight: 900;
   color: var(--myYellow);
   font-size: 4em;
-  margin-top: 30px;
-  padding: 6px;
-  border: 6px solid var(--myYellow);
-  border-radius: 8px;
+  margin-top: 15px;
 `;
 
 const Loader = ({ finishLoading }) => {
