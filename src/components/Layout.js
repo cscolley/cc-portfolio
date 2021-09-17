@@ -3,6 +3,7 @@ import { GlobalStyle } from "../styles/GlobalStyle";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import Loader from "./Loader";
+import Head from "./Head";
 import "@fontsource/gloria-hallelujah";
 import "@fontsource/roboto";
 
@@ -32,6 +33,7 @@ const Layout = ({ children }) => {
 
   return (
     <>
+      <Head />
       <LayoutWrapper>
         <GlobalStyle />
         {isLoading ? (
