@@ -103,13 +103,16 @@ const Loader = ({ finishLoading }) => {
           </InputDiv>
           <DomainDiv>{text}</DomainDiv>
           <LogoDiv
-            initial={{ opacity: 0 }}
-            animate={{
-              opacity: [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1],
-              scale: [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1],
-              rotate: [0, 0, 270, 270, 0, 270, 270, 0, 0, 0, 0],
+            initial={{ 
+              opacity: 0,
+              scale: 0, 
             }}
-            transition={{ delay: 5, duration: 2.5, ease: "easeIn" }}
+            animate={{
+              opacity: 1,
+              scale: 1,
+              rotate: 360,
+            }}
+            transition={{ delay: 5, duration: 2.5, type: "spring", bounce: 0.6 }}
           >
             {myLogoText}
           </LogoDiv>
