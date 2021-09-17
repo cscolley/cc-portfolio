@@ -1,33 +1,24 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-import ReactAnime from "react-animejs";
+// import ReactAnime from "react-animejs";
+import { motion } from "framer-motion";
+
 import "@fontsource/gloria-hallelujah";
 import "@fontsource/roboto";
 import SearchIcon from "../images/search-solid.svg";
 
-const AnimateDiv = styled.div`
+const Wrapper = styled.div`
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 `;
 
-const LogoSpan = styled.span`
-  font-family: "Digital7Mono";
-  font-weight: 900;
-  color: var(--white);
-  font-size: 4em;
-`;
-
-const DomainSpan = styled.span`
-  font-family: "Gloria Hallelujah", cursive;
-  font-style: italic;
-  color: var(--white);
-  font-size: 3em;
-`;
-
-const InputWrapper = styled.div`
+const Content = styled.div`
+  height: 300px;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
 `;
 
@@ -42,111 +33,75 @@ const InputDiv = styled.div`
   width: 300px;
 `;
 
-const ImgWrapper = styled.div`
+const ImgDiv = styled.div`
   height: 50%;
   margin-left: 15px;
   margin-right: 15px;
   opacity: 0.7;
 `;
 
-const { Anime, stagger } = ReactAnime;
+const DomainDiv = styled.div`
+  font-family: "Gloria Hallelujah", cursive;
+  font-style: italic;
+  color: var(--white);
+  font-size: 3em;
+`;
 
-const AnimLogoSpan = ({ children }) => {
-  const animation = [
-    {
-      targets: ".atomic",
-      color: "#ffcc00",
-      easing: "easeInOutSine",
-      delay: stagger(50),
-    },
-  ];
-
-  return (
-    <Anime
-      type="span"
-      explode="characters"
-      explodeOptions={{ name: "atomic" }}
-      id="self1"
-      _onUpdate={animation}
-    >
-      {children}
-    </Anime>
-  );
-};
-
-const AnimDomainSpan = ({ children }) => {
-  const animation = [
-    {
-      targets: ".atomic",
-      color: "#ffcc00",
-      easing: "easeInOutSine",
-      delay: stagger(50),
-    },
-  ];
-
-  return (
-    <Anime
-      type="span"
-      explode="characters"
-      explodeOptions={{ name: "atomic" }}
-      id="self2"
-      _onUpdate={animation}
-    >
-      {children}
-    </Anime>
-  );
-};
+const LogoDiv = styled(motion.div)`
+  font-family: "Digital7Mono";
+  font-weight: 900;
+  color: var(--myYellow);
+  font-size: 4em;
+  padding: 6px;
+  border: 6px solid var(--myYellow);
+  border-radius: 15px;
+  background-color: var(--darkGrey);
+`;
 
 const InteractiveDemo = () => {
   const myLogoText = "<cc/>";
   const myDomainText = "chriscolley.com.au";
 
-  const [logoText, setLogoText] = useState("");
-  const [domainText, setDomainText] = useState("");
+  const [text, setText] = useState("");
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const delayedText = (i, myText) => {
       if (i < myText.length) {
-        if (i < myLogoText.length) {
-          setLogoText((t) => t + myText[i]);
-        } else {
-          setDomainText((t) => t + myText[i]);
-        }
+        setText((t) => t + myText[i]);
         setTimeout(() => {
           delayedText(++i, myText);
-        }, 50);
+        }, 150);
       } else return;
     };
 
     if (loading) {
-      delayedText(0, myLogoText + " " + myDomainText);
+      delayedText(0, myDomainText);
       setLoading(false);
     }
   });
 
   return (
-    <div>
-      <>
-        <InputWrapper>
+    <>
+      <Wrapper>
+        <Content>
           <InputDiv>
-            <ImgWrapper>
+            <ImgDiv>
               <img src={SearchIcon} alt="Search Icon" height="100%" />
-            </ImgWrapper>
-            <span>{logoText}</span>&nbsp;
-            <span>{domainText}</span>
+            </ImgDiv>
+            {text}
           </InputDiv>
-        </InputWrapper>
-        <AnimateDiv>
-          <LogoSpan>
-            <AnimLogoSpan>{logoText}</AnimLogoSpan>
-          </LogoSpan>
-          <DomainSpan>
-            <AnimDomainSpan>{domainText}</AnimDomainSpan>
-          </DomainSpan>
-        </AnimateDiv>
-      </>
-    </div>
+          <DomainDiv>{text}</DomainDiv>
+          <LogoDiv
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 3, duration: 6 }}
+          >
+            {myLogoText}
+          </LogoDiv>
+        </Content>
+      </Wrapper>
+    </>
   );
 };
 

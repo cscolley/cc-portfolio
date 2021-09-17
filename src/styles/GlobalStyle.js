@@ -24,7 +24,8 @@ export const GlobalStyle = createGlobalStyle`
     --midnightBlue: #161b7f;
     --darkOrchid: #8d3fd0;
     --electricBlue: #06b3d7;
-    --myYellow: #ffcc00;
+    --myYellow: #FFFF00;
+    /* --myYellow: #ffcc00; */
   }
 
   * {
