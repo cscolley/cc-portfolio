@@ -1,7 +1,11 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://www.chriscolley.com.au/",
-    title: "Portfolio",
+    title: 'Chris Colley - Web Developer',
+    description:
+      'Exciting content coming soon! Currently under construction.',
+    siteUrl: 'https://www.chriscolley.com.au', // No trailing slash allowed!
+    image: '/og-image1.png', // Path to your image you placed in the 'static' folder
+    twitterUsername: '@chriscolleyau',
   },
   // pathPrefix: "/cc-portfolio",
   plugins: [
