@@ -4,7 +4,7 @@ module.exports = {
     description:
       'Exciting content coming soon! Currently under construction.',
     siteUrl: 'https://www.chriscolley.com.au', // No trailing slash allowed!
-    image: '/og-image1.png', // Path to your image you placed in the 'static' folder
+    image: '/og-image1.jpg', // Path to your image you placed in the 'static' folder
     twitterUsername: '@chriscolleyau',
   },
   // pathPrefix: "/cc-portfolio",
