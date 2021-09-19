@@ -30,6 +30,7 @@ export const Content = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 
   @media (max-width: 1080px) {
     padding: 200px 100px;
@@ -57,15 +58,19 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Head />
-      <LayoutWrapper>
-        <GlobalStyle />
-        {isLoading ? (
-          <Content><Loader finishLoading={() => setIsLoading(false)} /></Content>
-        ) : (
-          <Content>{children}</Content>
-        )}
-      </LayoutWrapper>
+      <div id="root">
+        <Head />
+        <LayoutWrapper>
+          <GlobalStyle />
+          {isLoading ? (
+            <Content>
+              <Loader finishLoading={() => setIsLoading(false)} />
+            </Content>
+          ) : (
+            <Content>{children}</Content>
+          )}
+        </LayoutWrapper>
+      </div>
     </>
   );
 };
