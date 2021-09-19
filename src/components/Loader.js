@@ -56,7 +56,6 @@ const LogoDiv = styled(motion.div)`
 `;
 
 const Loader = ({ finishLoading }) => {
-  const myLogoText = "<cc/>";
   const myDomainText = "chriscolley.com.au";
 
   const [text, setText] = useState("");
@@ -76,7 +75,7 @@ const Loader = ({ finishLoading }) => {
       delayedText(0, myDomainText);
       setIsTyping(false);
     }
-  });
+  }, [isTyping]);
 
   return (
     <>
