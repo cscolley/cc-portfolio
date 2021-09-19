@@ -9,6 +9,9 @@ import "@fontsource/roboto";
 
 export const LayoutWrapper = styled.div`
   min-height: 100hv;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 
 export const StyledH1 = styled(motion.h1)`
@@ -16,6 +19,27 @@ export const StyledH1 = styled(motion.h1)`
   color: var(--white);
   font-size: 3em;
   text-align: center;
+`;
+
+export const Content = styled.div`
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1600px;
+  min-height: 100vh;
+  padding: 200px 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media (max-width: 1080px) {
+    padding: 200px 100px;
+  }
+  @media (max-width: 768px) {
+    padding: 150px 50px;
+  }
+  @media (max-width: 480px) {
+    padding: 125px 25px;
+  }
 `;
 
 const H1Variants = {
@@ -37,13 +61,10 @@ const Layout = ({ children }) => {
       <LayoutWrapper>
         <GlobalStyle />
         {isLoading ? (
-          <Loader finishLoading={() => setIsLoading(false)} />
+          <Content><Loader finishLoading={() => setIsLoading(false)} /></Content>
         ) : (
-          <StyledH1 variants={H1Variants} initial="initial" animate="animate">
-            Under Construction
-          </StyledH1>
+          <Content>{children}</Content>
         )}
-        {children}
       </LayoutWrapper>
     </>
   );

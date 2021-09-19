@@ -18,6 +18,7 @@ export const GlobalStyle = createGlobalStyle`
     :root {
     --width: 460px;
     --white: #fafafa;
+    --lightGrey: #ccd6f6;
     --darkGrey: rgba(28, 28, 28, 0.98);
     --paradisePink: #ed3d63;
     --palatinateBlue: #223ccf;
@@ -34,11 +35,20 @@ export const GlobalStyle = createGlobalStyle`
 
   body {
     margin: 0;
-    padding: 0;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    width: 100%;
+    min-height: 100%;
+    overflow-x: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
     background-color: var(--midnightBlue);
   }
+
+  #root {
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: 1fr auto;
+    grid-template-columns: 100%;
+  }
+
+
 `;

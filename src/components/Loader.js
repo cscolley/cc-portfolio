@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import "@fontsource/gloria-hallelujah";
 import "@fontsource/roboto";
 import SearchIcon from "../images/search-solid.svg";
+import Logo from "./Logo";
 
 const Wrapper = styled.div`
   display: flex;
@@ -51,10 +52,6 @@ const DomainDiv = styled.div`
 `;
 
 const LogoDiv = styled(motion.div)`
-  font-family: "Digital7Mono";
-  font-weight: 900;
-  color: var(--myYellow);
-  font-size: 4em;
   margin-top: 15px;
 `;
 
@@ -114,7 +111,7 @@ const Loader = ({ finishLoading }) => {
             }}
             transition={{ delay: 5, duration: 2.5, type: "spring", bounce: 0.6 }}
           >
-            {myLogoText}
+            <Logo />
           </LogoDiv>
         </Content>
       </Wrapper>
