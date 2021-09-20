@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import "@fontsource/gloria-hallelujah";
 import "@fontsource/roboto";
 import SearchIcon from "../images/search-solid.svg";
-import Logo from "./Logo";
+import Logo from "./icons/Logo";
 
 const Wrapper = styled.div`
   display: flex;

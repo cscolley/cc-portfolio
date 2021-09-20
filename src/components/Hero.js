@@ -3,9 +3,9 @@ import { motion } from "framer-motion";
 import styled from "styled-components";
 import "@fontsource/gloria-hallelujah";
 import "@fontsource/roboto";
-import Logo from "./Logo";
 
-const Wrapper = styled(motion.div)`
+const Wrapper = styled(motion.section)`
+  ${({ theme }) => theme.mixins.flexCenter};
   flex-direction: column;
   align-items: flex-start;
   min-height: 100vh;
@@ -79,9 +79,7 @@ const four = (
   </p>
 );
 
-const five = <div style={{ fontSize: "2em", marginTop: "20px" }} ><Logo /></div>;
-
-const items = [one, two, three, four, five];
+const items = [one, two, three, four];
 
 const Hero = () => {
   return (

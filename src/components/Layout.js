@@ -1,75 +1,76 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { GlobalStyle } from "../styles/GlobalStyle";
-import styled from "styled-components";
-import { motion } from "framer-motion";
+import theme from "../styles/theme";
+import styled, { ThemeProvider } from "styled-components";
 import Loader from "./Loader";
 import Head from "./Head";
+import Nav from "./Nav";
 import "@fontsource/gloria-hallelujah";
 import "@fontsource/roboto";
 
-export const LayoutWrapper = styled.div`
-  min-height: 100hv;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-`;
-
-export const StyledH1 = styled(motion.h1)`
-  font-family: "Roboto";
-  color: var(--white);
-  font-size: 3em;
-  text-align: center;
-`;
+// https://medium.com/@chrisfitkin/how-to-smooth-scroll-links-in-gatsby-3dc445299558
+if (typeof window !== "undefined") {
+  // eslint-disable-next-line global-require
+  require("smooth-scroll")('a[href*="#"]');
+}
 
 export const Content = styled.div`
-  margin: 0 auto;
-  width: 100%;
-  max-width: 1600px;
-  min-height: 100vh;
-  padding: 200px 150px;
   display: flex;
-  align-items: center;
-  justify-content: center;
   flex-direction: column;
-
-  @media (max-width: 1080px) {
-    padding: 200px 100px;
-  }
-  @media (max-width: 768px) {
-    padding: 150px 50px;
-  }
-  @media (max-width: 480px) {
-    padding: 125px 25px;
-  }
+  min-height: 100vh;
 `;
 
-const H1Variants = {
-  initial: { y: -1000 },
-  animate: { y: 0 },
-  transition: {
-    type: "tween",
-    duration: 2,
-    delay: 0.4,
-  },
-};
+const Layout = ({ children, location }) => {
+  const isHome = location.pathname === "/";
+  const [isLoading, setIsLoading] = useState(isHome);
 
-const Layout = ({ children }) => {
-  const [isLoading, setIsLoading] = useState(true);
+  // Sets target="_blank" rel="noopener noreferrer" on external links
+  const handleExternalLinks = () => {
+    const allLinks = Array.from(document.querySelectorAll("a"));
+    if (allLinks.length > 0) {
+      allLinks.forEach((link) => {
+        if (link.host !== window.location.host) {
+          link.setAttribute("rel", "noopener noreferrer");
+          link.setAttribute("target", "_blank");
+        }
+      });
+    }
+  };
+
+  useEffect(() => {
+    if (isLoading) {
+      return;
+    }
+
+    if (location.hash) {
+      const id = location.hash.substring(1); // location.hash without the '#'
+      setTimeout(() => {
+        const el = document.getElementById(id);
+        if (el) {
+          el.scrollIntoView();
+          el.focus();
+        }
+      }, 0);
+    }
+
+    handleExternalLinks();
+  }, [isLoading]);
 
   return (
     <>
+      <Head />
       <div id="root">
-        <Head />
-        <LayoutWrapper>
+        <ThemeProvider theme={theme}>
           <GlobalStyle />
-          {isLoading ? (
-            <Content>
-              <Loader finishLoading={() => setIsLoading(false)} />
-            </Content>
+          {isLoading && isHome ? (
+            <Loader finishLoading={() => setIsLoading(false)} />
           ) : (
-            <Content>{children}</Content>
+            <Content>
+              <Nav isHome={isHome} />
+              <div id="content">{children}</div>
+            </Content>
           )}
-        </LayoutWrapper>
+        </ThemeProvider>
       </div>
     </>
   );

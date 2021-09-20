@@ -3,11 +3,13 @@ import Layout from "../components/Layout";
 import Hero from "../components/Hero";
 import About from "../components/About";
 
-const IndexPage = () => {
+const IndexPage = ({ location }) => {
   return (
-    <Layout>
-      <Hero />
-      <About />
+    <Layout location={location}>
+      <main className="fillHeight">
+        <Hero />
+        <About />
+      </main>
     </Layout>
   );
 };

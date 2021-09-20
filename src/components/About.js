@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import styled from "styled-components";
 import { StaticImage } from "gatsby-plugin-image";
+import sr from '../utils/sr';
+import { srConfig } from '../config';
 
 const Wrapper = styled.section`
   max-width: 900px;
@@ -35,7 +37,6 @@ const Wrapper = styled.section`
       position: relative;
       border-radius: 20px;
       border: 5px solid var(--myYellow);
-      padding: 15px;
     }
   }
 `;
@@ -51,9 +52,15 @@ const PhotoDiv = styled.div`
 `;
 
 const About = () => {
+  const revealContainer = useRef(null);
+
+  useEffect(() => {
+    sr.reveal(revealContainer.current, srConfig());
+  }, []);
+
   return (
-    <Wrapper>
-      <h1>01. About Me</h1>
+    <Wrapper id="about" ref={revealContainer}>
+      <h1>About Me</h1>
       <div className="inner">
         <div>
           <p>
@@ -77,6 +84,7 @@ const About = () => {
             className="img"
             src="../images/PhotoOfMeSmaller.jpg"
             alt="Photo of Chris Colley"
+            formats={['AUTO', 'WEBP', 'AVIF']}
           />
         </PhotoDiv>
       </div>
