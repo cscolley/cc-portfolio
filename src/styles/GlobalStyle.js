@@ -56,6 +56,7 @@ export const GlobalStyle = createGlobalStyle`
     width: 100%;
     min-height: 100%;
     overflow-x: hidden;
+    font-family: "Roboto";
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     background-color: var(--midnightBlue);
