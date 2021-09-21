@@ -21,7 +21,7 @@ const Wrapper = styled(motion.section)`
     font-size: clamp(40px, 8vw, 80px);
     font-family: "Gloria Hallelujah";
     font-style: italic;
-    color: var(--white);
+    color: var(--myYellow);
     font-weight: 600;
   }
 
@@ -35,7 +35,7 @@ const Wrapper = styled(motion.section)`
 
   h3 {
     margin: 0 0 30px 4px;
-    color: var(--myYellow);
+    color: var(--white);
     font-family: "Roboto";
     font-size: clamp(16px, 5vw, 22px);
     font-weight: 400;

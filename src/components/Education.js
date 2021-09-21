@@ -29,10 +29,10 @@ const Wrapper = styled.section`
   max-width: 900px;
 
   h1 {
-    margin: 0 0 30px 4px;
+    margin: 0 0 30px;
     color: var(--myYellow);
     font-family: "Roboto";
-    font-size: clamp(24px, 5vw, 32px);
+    font-size: clamp(28px, 6vw, 36px);
     font-weight: 600;
   }
 
@@ -40,8 +40,9 @@ const Wrapper = styled.section`
     width: 100%;
     height: 100%;
     border-radius: 20px;
-
-    background-color: var(--lightGrey);
+    background-color: var(--midnightBlue);
+    box-shadow: 0px 6px 6px -3px rgb(0 0 0 / 20%),
+      0px 10px 14px 1px rgb(0 0 0 / 14%), 0px 4px 18px 3px rgb(0 0 0 / 12%);
   }
 
   .swiper-slide {
@@ -62,6 +63,26 @@ const Wrapper = styled.section`
     align-items: center;
   }
 
+  .swiper-button-next {
+    color: var(--myYellow);
+  }
+
+  .swiper-button-prev {
+    color: var(--myYellow);
+  }
+
+  .swiper-pagination-bullet {
+    background-color: var(--white);
+    opacity: 0.5;
+    margin: 0 5px;
+    size: 10px;
+  }
+
+  .swiper-pagination-bullet-active {
+    background-color: var(--myYellow);
+    opacity: 1;
+  }
+
   @media screen and (max-width: 600px) {
     .swiper-button-next {
       visibility: hidden;
@@ -73,15 +94,11 @@ const Wrapper = styled.section`
   }
 `;
 
-
-
 const Content = styled.div`
   width: 80%;
-  height: 90%;
   display: block;
   font-family: "Roboto";
-  color: var(--midnightBlue);
-  background-color: var(--lightGrey);
+  color: var(--lightGrey);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -93,26 +110,42 @@ const Content = styled.div`
   }
 
   .myText {
-    margin: 20px auto 40px;
+    margin: 0 auto 50px;
 
     h2 {
+      color: var(--white);
       font-size: clamp(20px, 5vw, 26px);
-      font-weight: 700;
+      font-weight: 900;
+      margin: 12px 0;
     }
 
     h3 {
-      font-size: clamp(18px, 5vw, 24px);
+      font-size: clamp(18px, 4vw, 24px);
       font-weight: 500;
       font-style: italic;
+      margin: 12px 0;
     }
 
+    h4 {
+      font-size: clamp(16px, 4vw, 20px);
+      color: var(--white);
+      font-weight: 500;
+      margin: 12px 0;
+    }
+
+    ul {
+      padding-inline-start: 15px;
+    }
+
+    li,
     p {
       margin: 10px auto;
-      font-size: clamp(14px, 5vw, 20px);
+      font-size: clamp(14px, 3vw, 18px);
       font-weight: 400;
     }
 
-    strong {
+    span {
+      color: var(--white);
       font-weight: 900;
       text-decoration: underline;
     }
@@ -123,6 +156,8 @@ const PhotoDiv = styled.div`
   position: relative;
   max-width: 300px;
   margin: 20px auto;
+  background-color: white;
+  border-radius: 5px;
 
   img {
     border-radius: 5px;
@@ -164,17 +199,20 @@ const Education = () => {
                 Master of Information Technology (Software Development major)
               </h2>
               <h3>Swinburne Univerity of Technology, Melbourne, Australia</h3>
-              <p>
-                I achieved an exceptionally high{" "}
-                <strong>3.67 Grade Point Average</strong> across all subjects
-                and I have received multiple scholarship awards, recognising
-                both project and individual student achievements.
-              </p>
-              <p>
-                1 delivered practical real-world projects as well as applying my
-                theoretical understanding of design, development, customisation,
-                configuration, testing and deployment.
-              </p>
+              <h4>(Graduated 2021)</h4>
+              <ul>
+                <li>
+                  I achieved an exceptionally high{" "}
+                  <span>3.67 Grade Point Average</span> across all subjects and
+                  I have received multiple scholarship awards, recognising both
+                  project and individual student achievements.
+                </li>
+                <li>
+                  I delivered practical real-world projects as well as applying
+                  my theoretical understanding of design, development,
+                  customisation, configuration, testing and deployment.
+                </li>
+              </ul>
             </div>
           </Content>
         </SwiperSlide>
@@ -191,10 +229,13 @@ const Education = () => {
             <div className="myText">
               <h2>Doctor of Philosophy - PhD Chemistry</h2>
               <h3>University of Nottingham, UK</h3>
-              <p>
-                Thesis Title: Time Resolved Infrared Spectroscopy of Organic and
-                Biological Transient Species
-              </p>
+              <h4>(Graduated 2001)</h4>
+              <ul>
+                <li>
+                  Thesis Title: Time Resolved Infrared Spectroscopy of Organic
+                  and Biological Transient Species
+                </li>
+              </ul>
             </div>
           </Content>
         </SwiperSlide>
@@ -211,10 +252,13 @@ const Education = () => {
             <div className="myText">
               <h2>BSc Honours Chemistry</h2>
               <h3>University of Nottingham, UK</h3>
-              <p>Achieved First Class</p>
-              <p>
-                Recieved Multiple Awards for outstanding academic performance
-              </p>
+              <h4>(Graduated 1997)</h4>
+              <ul>
+                <li>Achieved First Class</li>
+                <li>
+                  Received Multiple Awards for outstanding academic performance
+                </li>
+              </ul>
             </div>
           </Content>
         </SwiperSlide>
