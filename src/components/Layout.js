@@ -67,7 +67,7 @@ const Layout = ({ children, location }) => {
           ) : (
             <Content>
               <Nav isHome={isHome} />
-              <div id="content">{children}</div>
+              <div>{children}</div>
             </Content>
           )}
         </ThemeProvider>
