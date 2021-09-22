@@ -257,16 +257,39 @@ export const GlobalStyle = createGlobalStyle`
           margin: 40px auto;
 
           .icon {
-            width: 50px;
             margin: 0 20px;
+            color: var(--myYellow);
 
-            a {
-              color: var(--myYellow);
-              text-decoration: none;
+            &:hover,
+            &:focus {
+              transform: translateY(-3px);
+            }
+            
+            svg {              
+              width: 50px;
+              height: 50px;
             }
           }
         }
       }
+    }
+  }
+
+  a {
+    display: inline-block;
+    text-decoration: none;
+    text-decoration-skip-ink: auto;
+    color: inherit;
+    position: relative;
+    transition: var(--transition);
+
+    &:hover,
+    &:focus {
+      color: var(--paradisePink);
+    }
+
+    &.inline-link {
+      ${({ theme }) => theme.mixins.inlineLink};
     }
   }
 
@@ -282,7 +305,7 @@ export const GlobalStyle = createGlobalStyle`
 
     &:focus,
     &:active {
-      background-color: var(--green);
+      background-color: var(--paradisePink);
       color: var(--navy);
       top: 0;
       left: 0;

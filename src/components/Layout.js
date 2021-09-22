@@ -7,6 +7,8 @@ import Head from "./Head";
 import Nav from "./Nav";
 import "@fontsource/gloria-hallelujah";
 import "@fontsource/roboto";
+import Social from "./social";
+import Email from "./email";
 
 // https://medium.com/@chrisfitkin/how-to-smooth-scroll-links-in-gatsby-3dc445299558
 if (typeof window !== "undefined") {
@@ -67,6 +69,8 @@ const Layout = ({ children, location }) => {
           ) : (
             <Content>
               <Nav isHome={isHome} />
+              <Social />
+              <Email />
               <div>{children}</div>
             </Content>
           )}

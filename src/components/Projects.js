@@ -3,8 +3,8 @@ import styled from "styled-components";
 import sr from "../utils/sr";
 import { srConfig } from "../config";
 import { StaticImage } from "gatsby-plugin-image";
-import GithubIcon from "./icons/GithubIcon";
-import IconExternal from "./icons/ExternalLinkIcon";
+import GitHubIcon from "./icons/GitHubIcon";
+import ExternalLinkIcon from "./icons/ExternalLinkIcon";
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -92,12 +92,12 @@ const Projects = () => {
               <div className="icons">
                 <div className="icon">
                   <a href="https://github.com/cscolley/pomodoro-timer">
-                    <GithubIcon />
+                    <GitHubIcon />
                   </a>
                 </div>
                 <div className="icon">
                   <a href="https://cscolley.github.io/pomodoro-timer/">
-                    <IconExternal />
+                    <ExternalLinkIcon />
                   </a>
                 </div>
               </div>

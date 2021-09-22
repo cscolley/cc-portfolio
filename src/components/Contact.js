@@ -3,6 +3,8 @@ import styled from "styled-components";
 import { StaticImage } from "gatsby-plugin-image";
 import sr from "../utils/sr";
 import { srConfig } from "../config";
+import EmailIcon from "./icons/EmailIcon";
+import { email } from "../config";
 
 const Wrapper = styled.section`
   max-width: 600px;
@@ -25,28 +27,12 @@ const Wrapper = styled.section`
     font-weight: 600;
   }
 
-  .inner {
-    /* display: grid;
-    grid-template-columns: 3fr 2fr;
-    grid-gap: 50px;
+  .content {
+    color: var(--myYellow);
 
-    @media (max-width: 768px) {
-      display: block;
-    } */
-
-    p {
-      margin: 0;
-      max-width: 540px;
-      font-family: "Roboto";
-      color: var(--lightGrey);
-      font-size: clamp(16px, 5vw, 22px);
-      font-weight: 400;
-    }
-
-    .img {
-      position: relative;
-      border-radius: 20px;
-      border: 5px solid var(--myYellow);
+    svg {
+      width: 100px;
+      height: 100%;
     }
   }
 `;
@@ -71,8 +57,10 @@ const Contact = () => {
   return (
     <Wrapper id="contact" ref={revealContainer}>
       <h1>Contact</h1>
-      <div className="inner">
-        <p>Contact info</p>
+      <div className="content">
+        <a href={`mailto:${email}`}>
+          <EmailIcon />
+        </a>
       </div>
     </Wrapper>
   );

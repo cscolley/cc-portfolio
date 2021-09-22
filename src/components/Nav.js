@@ -66,6 +66,11 @@ const StyledNav = styled.nav`
     ${({ theme }) => theme.mixins.flexCenter};
     font-size: 0.7em;
 
+    &:hover,
+    &:focus {
+      transform: translateY(-3px);
+    }
+
     a {
       text-decoration: none;
     }
