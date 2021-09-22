@@ -28,7 +28,6 @@ const Wrapper = styled(motion.section)`
   h2 {
     margin: 0;
     font-size: clamp(40px, 8vw, 80px);
-    font-family: "Roboto";
     color: var(--lightGrey);
     font-weight: 600;
   }
@@ -36,7 +35,6 @@ const Wrapper = styled(motion.section)`
   h3 {
     margin: 0 0 30px 4px;
     color: var(--white);
-    font-family: "Roboto";
     font-size: clamp(16px, 5vw, 22px);
     font-weight: 400;
 
@@ -48,7 +46,6 @@ const Wrapper = styled(motion.section)`
   p {
     margin: 20px 0 0;
     max-width: 540px;
-    font-family: "Roboto";
     color: var(--lightGrey);
     font-size: clamp(16px, 5vw, 22px);
     font-weight: 400;
