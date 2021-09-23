@@ -255,7 +255,11 @@ export const GlobalStyle = createGlobalStyle`
           display: flex;
           justify-content: center;
           text-align: center;
-          margin: 40px auto;
+          margin: 30px auto;
+
+          @media (max-width: 600px) {
+            margin: 15px auto;
+          }
 
           .icon {
             margin: 0 20px;
@@ -267,8 +271,13 @@ export const GlobalStyle = createGlobalStyle`
             }
             
             svg {              
-              width: 50px;
-              height: 50px;
+              width: 40px;
+              height: 40px;
+
+              @media (max-width: 600px) {
+                width: 30px;
+                height: 30px;
+              }
             }
           }
         }

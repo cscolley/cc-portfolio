@@ -53,6 +53,10 @@ const DomainDiv = styled.div`
 
 const LogoDiv = styled(motion.div)`
   margin-top: 15px;
+
+  .cc-logo {
+    font-size: 6em;
+  }
 `;
 
 const Loader = ({ finishLoading }) => {

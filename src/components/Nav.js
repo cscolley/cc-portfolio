@@ -26,7 +26,14 @@ const StyledHeader = styled.header`
   backdrop-filter: blur(10px);
   transition: var(--transition);
 
-  ${(props) =>
+  @media (max-width: 1080px) {
+    padding: 0 40px;
+  }
+  @media (max-width: 768px) {
+    padding: 0 25px;
+  }
+
+  ${(props) => 
     props.scrollDirection === "up" &&
     !props.scrolledToTop &&
     css`
@@ -36,7 +43,7 @@ const StyledHeader = styled.header`
       box-shadow: 0 10px 30px -10px var(--navy-shadow);
     `};
 
-  ${(props) =>
+  ${(props) => 
     props.scrollDirection === "down" &&
     !props.scrolledToTop &&
     css`
@@ -44,14 +51,7 @@ const StyledHeader = styled.header`
       transform: translateY(calc(var(--nav-scroll-height) * -1));
       box-shadow: 0 10px 30px -10px var(--navy-shadow);
     `};
-  }
-
-  @media (max-width: 1080px) {
-    padding: 0 40px;
-  }
-  @media (max-width: 768px) {
-    padding: 0 25px;
-  }
+  
 `;
 
 const StyledNav = styled.nav`
@@ -64,7 +64,7 @@ const StyledNav = styled.nav`
 
   .logo {
     ${({ theme }) => theme.mixins.flexCenter};
-    font-size: 0.7em;
+    font-size: 2em;
 
     &:hover,
     &:focus {
