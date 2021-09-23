@@ -27,14 +27,14 @@ const Wrapper = styled(motion.section)`
 
   h2 {
     margin: 0;
-    font-size: clamp(40px, 8vw, 80px);
+    font-size: clamp(42px, 6vw, 64px);
     color: var(--lightGrey);
     font-weight: 600;
   }
 
   h3 {
     margin: 0 0 30px 4px;
-    color: var(--white);
+    color: var(--lightGrey);
     font-size: clamp(16px, 5vw, 22px);
     font-weight: 400;
 
@@ -49,6 +49,7 @@ const Wrapper = styled(motion.section)`
     color: var(--lightGrey);
     font-size: clamp(16px, 5vw, 22px);
     font-weight: 400;
+    line-height: 1.4em;
   }
 `;
 
@@ -70,9 +71,8 @@ const three = <h2>I build things for the web.</h2>;
 
 const four = (
   <p>
-    I am a Software Development Professional with a Masters of IT qualification
-    and a broad technical skill set that encompasses digital product development
-    and test automation.
+    I am a Software Development Professional with a recent Masters of IT qualification
+    backed by years of Product Management experience delivering successful software products.
   </p>
 );
 

@@ -38,7 +38,7 @@ const Experience = () => {
 
   return (
     <Wrapper id="experience" ref={revealContainer}>
-      <div className='section-header'>Experience</div>
+      <div className="section-header">Experience</div>
       <Swiper
         navigation={true}
         pagination={true}
@@ -46,8 +46,8 @@ const Experience = () => {
         keyboard={true}
       >
         <SwiperSlide>
-          <div className='content'>
-            <div className='image'>
+          <div className="content">
+            <div className="image">
               <StaticImage
                 className="img"
                 src="../images/agilent-technologies-logo.jpg"
@@ -78,42 +78,71 @@ const Experience = () => {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className='content'>
-            <div className='image'>
+          <div className="content">
+            <div className="image">
               <StaticImage
                 className="img"
-                src="../images/university-of-nottingham-vector-logo copy-01.svg"
-                alt="University of Nottingham Logo"
+                src="../images/agilent-technologies-logo.jpg"
+                alt="Agilent Technologies Logo"
                 formats={["AUTO", "WEBP", "AVIF"]}
               />
             </div>
             <div className="myText">
-              <h2>Doctor of Philosophy - PhD Chemistry</h2>
-              <h3>University of Nottingham, UK</h3>
-              <p>
-                Thesis Title: Time Resolved Infrared Spectroscopy of Organic and
-                Biological Transient Species
-              </p>
+              <h2>NPI Product Manager</h2>
+              <h3>Agilent Technologies, Melbourne, Australia</h3>
+              <h4>(Feb 2012 - Feb 2017)</h4>
+              <ul>
+                <li>
+                  As the Product Manager for New Product Introductions within
+                  the Molecular Spectroscopy division (&gt;US$80m annual
+                  revenue) I was responsible for the successful delivery of new
+                  software and hardware products leading to significant business
+                  growth and increased market share.
+                </li>
+                <li>
+                  Acting as Product Owner embedded within a Scrum Agile team I
+                  was responsible for software specifications, UI/UX design and
+                  the translation of specifications into stories with acceptance
+                  criteria.
+                </li>
+                <li>
+                  I prioritised stories and defects working within a
+                  cross-functional team.
+                </li>
+              </ul>
             </div>
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className='content'>
-            <div className='image'>
+          <div className="content">
+            <div className="image">
               <StaticImage
                 className="img"
-                src="../images/university-of-nottingham-vector-logo copy-01.svg"
-                alt="University of Nottingham Logo"
+                src="../images/agilent-technologies-logo.jpg"
+                alt="Agilent Technologies Logo"
                 formats={["AUTO", "WEBP", "AVIF"]}
               />
             </div>
             <div className="myText">
-              <h2>BSc Honours Chemistry</h2>
-              <h3>University of Nottingham, UK</h3>
-              <p>Achieved First Class</p>
-              <p>
-                Received Multiple Awards for outstanding academic performance
-              </p>
+              <h2>Technical Marketing (Product Specialist)</h2>
+              <h3>Agilent Technologies, Melbourne, Australia</h3>
+              <h4>(Feb 2008 - Feb 2012)</h4>
+              <ul>
+                <li>
+                  Strong client and stakeholder interface allowed me to support
+                  software and hardware development projects as a technical SME.
+                </li>
+                <li>
+                  I worked with R&amp;D teams to ensure that products were
+                  developed according to spec such that they met customer needs.
+                </li>
+                <li>
+                  Created high quality marketing materials and technical
+                  documentation for new products. Also, produced training
+                  material, delivering presentations to customers and sales
+                  teams.
+                </li>
+              </ul>
             </div>
           </div>
         </SwiperSlide>

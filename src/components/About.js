@@ -1,8 +1,8 @@
 import React, { useRef, useEffect } from "react";
 import styled from "styled-components";
 import { StaticImage } from "gatsby-plugin-image";
-import sr from '../utils/sr';
-import { srConfig } from '../config';
+import sr from "../utils/sr";
+import { srConfig } from "../config";
 
 const Wrapper = styled.section`
   max-width: 900px;
@@ -64,19 +64,18 @@ const About = () => {
       <div className="inner">
         <div>
           <p>
-            My exposure and experience in delivering cloud-based projects
-            involved applying my knowledge of full stack development, cloud
-            technology, UI/UX design.
+            I am passionate about the delivery of high quality software products
+            that make a real difference to people's lives.
           </p>
           <p>
-            I supported software projects which involved enhancing data
-            processing and compliance by leading test automation development to
-            drive UAT efficiency within Agile development environments.
+            I have a very analytical mind and I am a natural problem solver. I
+            love to learn and I am constantly teaching myself new technology so
+            that I can deliver optimal solutions.
           </p>
           <p>
-            Experience in commercial software development involving multi-tier
-            architectures saw me contribute to optimisation, efficiency, digital
-            product launches and business growth.
+            Experience in commercial software development has seen me contribute
+            to specification, UI/UX design and delivery of successful digital
+            product launches with significant business growth.
           </p>
         </div>
         <PhotoDiv>
@@ -84,7 +83,7 @@ const About = () => {
             className="img"
             src="../images/PhotoOfMeSmaller.jpg"
             alt="Photo of Chris Colley"
-            formats={['AUTO', 'WEBP', 'AVIF']}
+            formats={["AUTO", "WEBP", "AVIF"]}
           />
         </PhotoDiv>
       </div>
