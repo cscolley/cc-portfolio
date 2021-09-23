@@ -23,7 +23,8 @@ export const GlobalStyle = createGlobalStyle`
     --darkGrey: rgba(28, 28, 28, 0.98);
     --paradisePink: #ed3d63;
     --palatinateBlue: #223ccf;
-    --midnightBlue: #161b7f;
+    --midnightBlue: #0d1163;
+    /* --midnightBlue: #161b7f; */
     --navy-shadow: rgba(2, 12, 27, 0.7);
     --darkOrchid: #8d3fd0;
     --electricBlue: #06b3d7;
