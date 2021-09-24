@@ -128,7 +128,7 @@ const Loader = ({ finishLoading }) => {
               }}
               transition={{
                 delay: 5,
-                duration: 1,
+                duration: 0.5,
               }}
             >
               <FontAwesomeIcon icon={["fas", "search"]} />

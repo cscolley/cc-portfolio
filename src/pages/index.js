@@ -6,6 +6,7 @@ import Education from "../components/Education";
 import Experience from "../components/Experience";
 import Projects from "../components/Projects";
 import Contact from "../components/Contact";
+import Tech from "../components/Tech";
 
 const IndexPage = ({ location }) => {
   return (
@@ -13,6 +14,7 @@ const IndexPage = ({ location }) => {
       <main className="fillHeight">
         <Hero />
         <About />
+        <Tech />
         <Education />
         <Experience />
         <Projects />

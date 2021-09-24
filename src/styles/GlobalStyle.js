@@ -181,8 +181,6 @@ export const GlobalStyle = createGlobalStyle`
 
     .content {
       width: 80%;
-      display: block;
-      font-family: "Roboto";
       color: var(--lightGrey);
       display: flex;
       flex-flow: column;
