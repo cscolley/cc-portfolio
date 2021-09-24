@@ -3,6 +3,7 @@ import styled from "styled-components";
 import sr from "../utils/sr";
 import { srConfig } from "../config";
 import { StaticImage } from "gatsby-plugin-image";
+import GoogleScholarIcon from "./icons/GoogleScholarIcon";
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -27,6 +28,33 @@ if (typeof window !== "undefined") {
 
 const Wrapper = styled.section`
   max-width: 900px;
+
+  .button {
+    width: 150px;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    align-items: center;
+    color: var(--myYellow);
+    padding: 6px 10px;
+    border: 1px solid var(--myYellow);
+    border-radius: 4px;
+    background-color: var(--midnightBlue);
+    box-shadow: 0px 6px 6px -3px rgb(0 0 0 / 20%),
+      0px 10px 14px 1px rgb(0 0 0 / 14%), 0px 4px 18px 3px rgb(0 0 0 / 12%);
+    font-size: 20px;
+
+    &:hover,
+    &:focus {
+      transform: translateY(-3px);
+      color: var(--paradisePink);
+    }
+
+    .icon {
+      height: 30px;
+      width: 30px;
+    }
+  }
 `;
 
 const Education = () => {
@@ -38,7 +66,7 @@ const Education = () => {
 
   return (
     <Wrapper id="education" ref={revealContainer}>
-      <div className='section-header'>Education</div>
+      <div className="section-header">Education</div>
       <Swiper
         navigation={true}
         pagination={true}
@@ -46,8 +74,8 @@ const Education = () => {
         keyboard={true}
       >
         <SwiperSlide>
-          <div className='content'>
-            <div className='image'>
+          <div className="content">
+            <div className="image">
               <StaticImage
                 className="img"
                 src="../images/1200px-Logo_of_Swinburne_University_of_Technology.svg"
@@ -70,16 +98,16 @@ const Education = () => {
                 </li>
                 <li>
                   I delivered practical real-world projects as well as applying
-                  my theoretical understanding of design, development,
-                  testing and deployment.
+                  my theoretical understanding of design, development, testing
+                  and deployment.
                 </li>
               </ul>
             </div>
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className='content'>
-            <div className='image'>
+          <div className="content">
+            <div className="image">
               <StaticImage
                 className="img"
                 src="../images/university-of-nottingham-vector-logo copy-01.svg"
@@ -97,12 +125,21 @@ const Education = () => {
                   and Biological Transient Species
                 </li>
               </ul>
+              <a
+                className="button"
+                href="https://scholar.google.com.au/citations?hl=en&user=5CvP1vwAAAAJ"
+              >
+                Publications
+                <div className="icon">
+                <GoogleScholarIcon />
+                </div>
+              </a>
             </div>
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className='content'>
-            <div className='image'>
+          <div className="content">
+            <div className="image">
               <StaticImage
                 className="img"
                 src="../images/university-of-nottingham-vector-logo copy-01.svg"
