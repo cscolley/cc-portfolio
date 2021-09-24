@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
-import "@fontsource/gloria-hallelujah";
 import "@fontsource/roboto";
 import SearchIcon from "../images/search-solid.svg";
 import Logo from "./icons/Logo";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Wrapper = styled.div`
   display: flex;
@@ -14,11 +14,19 @@ const Wrapper = styled.div`
 `;
 
 const Content = styled(motion.div)`
-  height: 270px;
+  height: 350px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+
+  @media (max-width: 768px) {
+    height: 325px;
+  }
+
+  @media (max-width: 480px) {
+    height: 300px;
+  }
 `;
 
 const InputDiv = styled(motion.div)`
@@ -28,34 +36,51 @@ const InputDiv = styled(motion.div)`
   font-family: "Roboto";
   color: var(--darkGrey);
   background-color: var(--white);
-  border-radius: 20px;
-  height: 40px;
-  width: 300px;
-`;
+  font-size: 30px;
+  border-radius: 35px;
+  height: 70px;
+  width: 600px;
+  margin: 0;
 
-const ImgDiv = styled.div`
-  height: 50%;
-  margin-left: 15px;
-  margin-right: 15px;
-  opacity: 0.7;
-`;
+  @media (max-width: 768px) {
+    font-size: 28px;
+    border-radius: 32.5px;
+    height: 65px;
+    width: 70vw;
+  }
 
-const DomainDiv = styled.div`
-  font-family: "Gloria Hallelujah", cursive;
-  font-style: italic;
-  color: var(--white);
-  font-size: 3em;
-
-  @media screen and (max-width: 600px) {
-    font-size: 2.4em;
+  @media (max-width: 480px) {
+    font-size: 24px;
+    border-radius: 30px;
+    height: 60px;
+    width: 84vw;
   }
 `;
 
+const Cursor = styled(motion.span)`
+  font-weight: 100;
+  font-size: 1.3em;
+`;
+
+const ImgDiv = styled(motion.div)`
+  height: 40%;
+  margin-left: 5%;
+  margin-right: 6%;
+  opacity: 0.6;
+  display: flex;
+  align-items: center;
+`;
+
 const LogoDiv = styled(motion.div)`
-  margin-top: 15px;
+  margin-top: 60px;
 
   .cc-logo {
-    font-size: 6em;
+    font-size: 12em;
+
+    @media (max-width: 480px) {
+      margin-bottom: 40px;
+      font-size: 8em;
+    }
   }
 `;
 
@@ -87,32 +112,51 @@ const Loader = ({ finishLoading }) => {
         <Content
           initial={{ opacity: 1 }}
           animate={{ opacity: 0 }}
-          transition={{ delay: 8, duration: 2, ease: "easeOut" }}
+          transition={{ delay: 9, duration: 2, ease: "easeOut" }}
           onAnimationComplete={finishLoading}
         >
           <InputDiv
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 2, ease: "easeIn" }}
+            transition={{ duration: 1.6, ease: "easeIn" }}
             onAnimationComplete={() => setIsTyping(true)}
           >
-            <ImgDiv>
-              <img src={SearchIcon} alt="Search Icon" height="100%" />
+            <ImgDiv
+              animate={{
+                opacity: [0.6, 1.5, 0.6],
+                scale: [1, 1.6, 1],
+              }}
+              transition={{
+                delay: 5,
+                duration: 1,
+              }}
+            >
+              <FontAwesomeIcon icon={["fas", "search"]} />
+              {/* <img src={SearchIcon} alt="Search Icon" height="100%" /> */}
             </ImgDiv>
             {text}
+            <Cursor
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 1.4, duration: 1, ease: "easeIn", repeat: Infinity }}
+            >|</Cursor>
           </InputDiv>
-          <DomainDiv>{text}</DomainDiv>
           <LogoDiv
-            initial={{ 
+            initial={{
               opacity: 0,
-              scale: 0, 
+              scale: 0,
             }}
             animate={{
               opacity: 1,
-              scale: 1,
+              scale: [1, 1.5, 1],
               rotate: 360,
             }}
-            transition={{ delay: 5, duration: 2.5, type: "spring", bounce: 0.6 }}
+            transition={{
+              delay: 6.2,
+              duration: 2.3,
+              type: "spring",
+              bounce: 0.6,
+            }}
           >
             <Logo />
           </LogoDiv>

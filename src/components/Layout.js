@@ -9,6 +9,12 @@ import "@fontsource/gloria-hallelujah";
 import "@fontsource/roboto";
 import Social from "./social";
 import Email from "./email";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { fab } from "@fortawesome/free-brands-svg-icons";
+import { far } from "@fortawesome/free-regular-svg-icons";
+import { fas } from '@fortawesome/free-solid-svg-icons';
+
+library.add(fas, fab, far);
 
 // https://medium.com/@chrisfitkin/how-to-smooth-scroll-links-in-gatsby-3dc445299558
 if (typeof window !== "undefined") {
