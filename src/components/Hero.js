@@ -18,7 +18,7 @@ const Wrapper = styled(motion.section)`
 
   h1 {    
     font-family: "Digital7Mono";
-    font-weight: 600;
+    font-weight: 500;
     color: var(--myYellow);
     margin: 0 0 30px;
     font-size: clamp(45px, 8vw, 80px);
@@ -96,8 +96,8 @@ const three = <h2>I build things for the web.</h2>;
 
 const four = (
   <p>
-    I am a Software Development Professional with a recent Masters of IT qualification
-    backed by years of Product Management experience delivering successful software products.
+    I am a software development professional with a recent Masters of IT qualification
+    backed by years of experience delivering successful software products.
   </p>
 );
 

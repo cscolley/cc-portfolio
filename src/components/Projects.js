@@ -57,7 +57,7 @@ const Projects = () => {
 
   return (
     <Wrapper id="projects" ref={revealContainer}>
-      <div className='section-header'>Projects</div>
+      <div className="section-header">Projects</div>
       <Swiper
         navigation={true}
         pagination={true}
@@ -65,7 +65,7 @@ const Projects = () => {
         keyboard={true}
       >
         <SwiperSlide>
-          <div className='content'>
+          <div className="content">
             <ProjectScreenshotDiv>
               <StaticImage
                 className="img"
@@ -76,19 +76,24 @@ const Projects = () => {
             </ProjectScreenshotDiv>
             <div className="myText">
               <h2>Pomodoro Timer</h2>
-              <h3>Swinburne Univerity of Technology, Melbourne, Australia</h3>
-              <h4>(Graduated 2021)</h4>
-              <p>
-                I achieved an exceptionally high{" "}
-                <span>3.67 Grade Point Average</span> across all subjects and I
-                have received multiple scholarship awards, recognising both
-                project and individual student achievements.
-              </p>
-              <p>
-                I delivered practical real-world projects as well as applying my
-                theoretical understanding of design, development, customisation,
-                configuration, testing and deployment.
-              </p>
+              <ul>
+                <li>
+                  I built this project as part of my FreeCodeCamp.org Front End
+                  Development Libraries Certification.
+                </li>
+                <li>
+                  The Pomodoro Technique is a productivity system to avoid
+                  procrastination or getting distracted by working for
+                  relatively short sessions followed by repeated short breaks.
+                </li>
+                <li>
+                  Technology used:
+                  <ul>
+                    <li>React</li>
+                    <li>Styled-Components</li>
+                  </ul>
+                </li>
+              </ul>
               <div className="icons">
                 <div className="icon">
                   <a href="https://github.com/cscolley/pomodoro-timer">
@@ -105,44 +110,42 @@ const Projects = () => {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className='content'>
+          <div className="content">
             <ProjectScreenshotDiv>
               <StaticImage
                 className="img"
-                src="../images/university-of-nottingham-vector-logo copy-01.svg"
-                alt="University of Nottingham Logo"
+                src="../images/calculator-screenshot.png"
+                alt="Calculator Web App Screenshot"
                 formats={["AUTO", "WEBP", "AVIF"]}
               />
             </ProjectScreenshotDiv>
             <div className="myText">
-              <h2>Doctor of Philosophy - PhD Chemistry</h2>
-              <h3>University of Nottingham, UK</h3>
-              <h4>(Graduated 2001)</h4>
-              <p>
-                Thesis Title: Time Resolved Infrared Spectroscopy of Organic and
-                Biological Transient Species
-              </p>
-            </div>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className='content'>
-            <ProjectScreenshotDiv>
-              <StaticImage
-                className="img"
-                src="../images/university-of-nottingham-vector-logo copy-01.svg"
-                alt="University of Nottingham Logo"
-                formats={["AUTO", "WEBP", "AVIF"]}
-              />
-            </ProjectScreenshotDiv>
-            <div className="myText">
-              <h2>BSc Honours Chemistry</h2>
-              <h3>University of Nottingham, UK</h3>
-              <h4>(Graduated 1997)</h4>
-              <p>Achieved First Class</p>
-              <p>
-                Received Multiple Awards for outstanding academic performance
-              </p>
+              <h2>Calculator</h2>
+              <ul>
+                <li>
+                  I built this project as part of my FreeCodeCamp.org Front End
+                  Development Libraries Certification.
+                </li>
+                <li>
+                  Technology used:
+                  <ul>
+                    <li>React</li>
+                    <li>Material-UI</li>
+                  </ul>
+                </li>
+              </ul>
+              <div className="icons">
+                <div className="icon">
+                  <a href="https://github.com/cscolley/react-calculator">
+                    <GitHubIcon />
+                  </a>
+                </div>
+                <div className="icon">
+                  <a href="https://cscolley.github.io/react-calculator/">
+                    <ExternalLinkIcon />
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </SwiperSlide>

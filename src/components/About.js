@@ -73,9 +73,10 @@ const About = () => {
             that I can deliver optimal solutions.
           </p>
           <p>
-            Experience in commercial software development has seen me contribute
-            to specification, UI/UX design and delivery of successful digital
-            product launches with significant business growth.
+            Experience in commercial software development has seen me play a
+            central role in specifications, UI/UX design and delivery of
+            successful digital product launches with significant business
+            growth.
           </p>
         </div>
         <PhotoDiv>
