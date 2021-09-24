@@ -2,9 +2,9 @@ module.exports = {
   siteMetadata: {
     title: 'Chris Colley - Web Developer',
     description:
-      'Exciting content coming soon! Currently under construction.',
+      'My Web Developer Portfolio. More exciting content coming soon!',
     siteUrl: 'https://www.chriscolley.com.au', // No trailing slash allowed!
-    image: '/og-image1.jpg', // Path to your image you placed in the 'static' folder
+    image: '/og-image.png', // Path to your image you placed in the 'static' folder
     twitterUsername: '@chriscolleyau',
   },
   // pathPrefix: "/cc-portfolio",
@@ -23,7 +23,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-manifest",
       options: {
-        icon: "src/images/cclogo-noborder60x20.png",
+        icon: "src/images/cc-portfolio-icon.jpg",
       },
     },
     "gatsby-transformer-remark",

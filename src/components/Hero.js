@@ -21,7 +21,7 @@ const Wrapper = styled(motion.section)`
     font-weight: 500;
     color: var(--myYellow);
     margin: 0 0 30px;
-    font-size: clamp(45px, 8vw, 80px);
+    font-size: clamp(50px, 9vw, 90px);
   }
 
   h2 {
