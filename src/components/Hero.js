@@ -1,8 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
 import styled from "styled-components";
-import "@fontsource/gloria-hallelujah";
-import "@fontsource/roboto";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Link } from "gatsby";
 
 const Wrapper = styled(motion.section)`
   ${({ theme }) => theme.mixins.flexCenter};
@@ -16,40 +16,65 @@ const Wrapper = styled(motion.section)`
     padding-bottom: 10vh;
   }
 
-  h1 {
-    margin: 0 0 30px 0;
-    font-size: clamp(40px, 8vw, 80px);
-    font-family: "Gloria Hallelujah";
-    font-style: italic;
-    color: var(--myYellow);
+  h1 {    
+    font-family: "Digital7Mono";
     font-weight: 600;
+    color: var(--myYellow);
+    margin: 0 0 30px;
+    font-size: clamp(45px, 8vw, 80px);
   }
 
   h2 {
     margin: 0;
-    font-size: clamp(42px, 6vw, 64px);
+    font-size: clamp(38px, 6vw, 64px);
     color: var(--lightGrey);
     font-weight: 600;
   }
 
   h3 {
-    margin: 0 0 30px 4px;
+    margin: 0 0 30px;
     color: var(--lightGrey);
     font-size: clamp(16px, 5vw, 22px);
     font-weight: 400;
 
     @media (max-width: 480px) {
-      margin: 0 0 20px 2px;
+      margin: 0 0 20px;
     }
   }
 
   p {
-    margin: 20px 0 0;
+    margin: 20px 0;
     max-width: 540px;
     color: var(--lightGrey);
     font-size: clamp(16px, 5vw, 22px);
     font-weight: 400;
     line-height: 1.4em;
+  }
+
+  .button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    align-items: center;
+    color: var(--myYellow);
+    padding: 10px;
+    border: 1px solid var(--myYellow);
+    border-radius: 4px;
+    background-color: var(--midnightBlue);
+    box-shadow: 0px 6px 6px -3px rgb(0 0 0 / 20%),
+      0px 10px 14px 1px rgb(0 0 0 / 14%), 0px 4px 18px 3px rgb(0 0 0 / 12%);
+    font-size: 24px;
+
+    &:hover,
+    &:focus {
+      transform: translateY(-3px);
+      color: var(--paradisePink);
+    }
+
+    &:visited {
+      color: var(--myYellow);
+    }
   }
 `;
 
@@ -76,7 +101,14 @@ const four = (
   </p>
 );
 
-const items = [one, two, three, four];
+const five = (
+  <Link className="button" to="/#contact">
+    Contact Me
+    <FontAwesomeIcon icon={["far", "smile-wink"]} />
+  </Link>
+)
+
+const items = [one, two, three, four, five];
 
 const Hero = () => {
   return (

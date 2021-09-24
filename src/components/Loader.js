@@ -20,8 +20,12 @@ const Content = styled(motion.div)`
   justify-content: space-between;
   align-items: center;
 
-  @media (max-width: 480) {
-    height: 250px;
+  @media (max-width: 768px) {
+    height: 325px;
+  }
+
+  @media (max-width: 480px) {
+    height: 300px;
   }
 `;
 
@@ -36,37 +40,46 @@ const InputDiv = styled(motion.div)`
   border-radius: 35px;
   height: 70px;
   width: 600px;
+  margin: 0;
 
   @media (max-width: 768px) {
-    font-size: 30px;
-    border-radius: 35px;
-    height: 70px;
-    width: 600px;
+    font-size: 28px;
+    border-radius: 32.5px;
+    height: 65px;
+    width: 70vw;
   }
 
   @media (max-width: 480px) {
-    font-size: 26px;
+    font-size: 24px;
     border-radius: 30px;
     height: 60px;
-    width: 90vw;
+    width: 84vw;
   }
+`;
+
+const Cursor = styled(motion.span)`
+  font-weight: 100;
+  font-size: 1.3em;
 `;
 
 const ImgDiv = styled(motion.div)`
   height: 40%;
   margin-left: 5%;
   margin-right: 6%;
-  opacity: 0.7;
+  opacity: 0.6;
+  display: flex;
+  align-items: center;
 `;
 
 const LogoDiv = styled(motion.div)`
-  margin-top: 15px;
+  margin-top: 60px;
 
   .cc-logo {
     font-size: 12em;
 
     @media (max-width: 480px) {
-      font-size: 9em;
+      margin-bottom: 40px;
+      font-size: 8em;
     }
   }
 `;
@@ -105,17 +118,13 @@ const Loader = ({ finishLoading }) => {
           <InputDiv
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 2, ease: "easeIn" }}
+            transition={{ duration: 1.6, ease: "easeIn" }}
             onAnimationComplete={() => setIsTyping(true)}
           >
             <ImgDiv
               animate={{
-                color: [
-                  "rgba(28, 28, 28, 0.98)",
-                  "#ed3d63",
-                  "rgba(28, 28, 28, 0.98)",
-                ],
-                scale: [1, 1.3, 1],
+                opacity: [0.6, 1.5, 0.6],
+                scale: [1, 1.6, 1],
               }}
               transition={{
                 delay: 5,
@@ -126,6 +135,11 @@ const Loader = ({ finishLoading }) => {
               {/* <img src={SearchIcon} alt="Search Icon" height="100%" /> */}
             </ImgDiv>
             {text}
+            <Cursor
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 1.4, duration: 1, ease: "easeIn", repeat: Infinity }}
+            >|</Cursor>
           </InputDiv>
           <LogoDiv
             initial={{
@@ -134,12 +148,12 @@ const Loader = ({ finishLoading }) => {
             }}
             animate={{
               opacity: 1,
-              scale: 1,
+              scale: [1, 1.5, 1],
               rotate: 360,
             }}
             transition={{
-              delay: 6,
-              duration: 2.5,
+              delay: 6.2,
+              duration: 2.3,
               type: "spring",
               bounce: 0.6,
             }}
