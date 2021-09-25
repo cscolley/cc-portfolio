@@ -21,7 +21,7 @@ const Wrapper = styled(motion.section)`
     font-weight: 500;
     color: var(--myYellow);
     margin: 0 0 30px;
-    font-size: clamp(50px, 9vw, 90px);
+    font-size: clamp(55px, 8vw, 100px);
   }
 
   h2 {
@@ -51,7 +51,7 @@ const Wrapper = styled(motion.section)`
     line-height: 1.4em;
   }
 
-  .button {
+  .contactMeButton {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -102,7 +102,7 @@ const four = (
 );
 
 const five = (
-  <Link className="button" to="/#contact">
+  <Link className="contactMeButton" to="/#contact">
     Contact Me
     <FontAwesomeIcon icon={["far", "smile-wink"]} />
   </Link>

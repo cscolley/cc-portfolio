@@ -1,9 +1,9 @@
 import React, { useRef, useEffect } from "react";
 import styled from "styled-components";
-import sr from "../utils/sr";
-import { srConfig } from "../config";
+import sr from "../../utils/sr";
+import { srConfig } from "../../config";
 import { StaticImage } from "gatsby-plugin-image";
-import GoogleScholarIcon from "./icons/GoogleScholarIcon";
+import GoogleScholarIcon from "../icons/GoogleScholarIcon";
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -28,33 +28,6 @@ if (typeof window !== "undefined") {
 
 const Wrapper = styled.section`
   max-width: 900px;
-
-  .button {
-    width: 150px;
-    display: flex;
-    justify-content: space-between;
-    gap: 10px;
-    align-items: center;
-    color: var(--myYellow);
-    padding: 6px 10px;
-    border: 1px solid var(--myYellow);
-    border-radius: 4px;
-    background-color: var(--midnightBlue);
-    box-shadow: 0px 6px 6px -3px rgb(0 0 0 / 20%),
-      0px 10px 14px 1px rgb(0 0 0 / 14%), 0px 4px 18px 3px rgb(0 0 0 / 12%);
-    font-size: 20px;
-
-    &:hover,
-    &:focus {
-      transform: translateY(-3px);
-      color: var(--paradisePink);
-    }
-
-    .icon {
-      height: 30px;
-      width: 30px;
-    }
-  }
 `;
 
 const LogoGrid = styled.div`
@@ -113,7 +86,7 @@ const Experience = () => {
             <div className="myText">
               <h2>Software QA Engineer</h2>
               <h3>Agilent Technologies, Melbourne, Australia</h3>
-              <h4>(Dec 2018 - Dec 2019)</h4>
+              <h4>Dec 2018 - Dec 2019</h4>
               <ul>
                 <li>
                   Lead automation and end-to-end workflow testing project stream
@@ -145,7 +118,7 @@ const Experience = () => {
             <div className="myText">
               <h2>NPI Product Manager</h2>
               <h3>Agilent Technologies, Melbourne, Australia</h3>
-              <h4>(Feb 2012 - Feb 2017)</h4>
+              <h4>Feb 2012 - Feb 2017</h4>
               <ul>
                 <li>
                   As the Product Manager for New Product Introductions within
@@ -181,7 +154,7 @@ const Experience = () => {
             <div className="myText">
               <h2>Technical Marketing (Product Specialist)</h2>
               <h3>Agilent Technologies, Melbourne, Australia</h3>
-              <h4>(Feb 2008 - Feb 2012)</h4>
+              <h4>Feb 2008 - Feb 2012</h4>
               <ul>
                 <li>
                   Strong client and stakeholder interface allowed me to support
@@ -243,7 +216,7 @@ const Experience = () => {
                 University College London, Imperial College London, RMIT
                 University, Monash University
               </h3>
-              <h4>(May 2001 - Oct 2007)</h4>
+              <h4>May 2001 - Oct 2007</h4>
               <ul>
                 <li>
                   My research largely focused on biomedical applications of

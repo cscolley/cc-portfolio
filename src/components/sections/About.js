@@ -1,8 +1,8 @@
 import React, { useRef, useEffect } from "react";
 import styled from "styled-components";
 import { StaticImage } from "gatsby-plugin-image";
-import sr from "../utils/sr";
-import { srConfig } from "../config";
+import sr from "../../utils/sr";
+import { srConfig } from "../../config";
 
 const Wrapper = styled.section`
   max-width: 900px;

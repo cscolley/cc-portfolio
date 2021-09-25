@@ -122,15 +122,16 @@ export const GlobalStyle = createGlobalStyle`
       font-size: clamp(28px, 6vw, 36px);
       font-weight: 600;
     }
+  }
 
-    .swiper {
-      width: 100%;
-      border: 1px solid rgba(200, 200, 200, 0.3);
-      border-radius: 20px;
-      background-color: var(--midnightBlue);
-      box-shadow: 0px 6px 6px -3px rgb(0 0 0 / 20%),
-        0px 10px 14px 1px rgb(0 0 0 / 14%), 0px 4px 18px 3px rgb(0 0 0 / 12%);
-    }
+  .swiper {
+    width: 100%;
+    border: 1px solid rgba(200, 200, 200, 0.3);
+    border-radius: 20px;
+    background-color: var(--midnightBlue);
+    box-shadow: 0px 6px 6px -3px rgb(0 0 0 / 20%),
+      0px 10px 14px 1px rgb(0 0 0 / 14%), 0px 4px 18px 3px rgb(0 0 0 / 12%);
+  
 
     .swiper-slide {
       height: auto;
@@ -178,106 +179,103 @@ export const GlobalStyle = createGlobalStyle`
         visibility: hidden;
       }
     }
+  }
 
-    .content {
-      width: 80%;
-      color: var(--lightGrey);
-      display: flex;
-      flex-flow: column;
-      justify-content: center;
-      align-items: center;
-      text-align: left;
+  .content {
+    width: 80%;
+    color: var(--lightGrey);
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 
-      @media screen and (max-width: 600px) {
-        width: 90%;
-      }
+    @media screen and (max-width: 600px) {
+      width: 90%;
+    }
 
-      .image {
-        position: relative;
-        max-width: 300px;
-        margin: 20px auto;
-        background-color: var(--white);
+    .image {
+      position: relative;
+      max-width: 300px;
+      margin: 20px auto;
+      background-color: var(--white);
+      border-radius: 5px;
+
+      img {
         border-radius: 5px;
-
-        img {
-          border-radius: 5px;
-        }
-
-        @media (max-width: 768px) {
-          width: 70%;
-        }
       }
 
-      .myText {
-        margin: 0 auto 50px;
+      @media (max-width: 768px) {
+        width: 70%;
+      }
+    }
+  }
 
-        h2 {
-          color: var(--white);
-          font-size: clamp(20px, 5vw, 26px);
-          font-weight: 900;
-          margin: 12px 0;
-        }
+  .myText {
+    margin: 0 auto 50px;
 
-        h3 {
-          font-size: clamp(18px, 4vw, 24px);
-          font-weight: 500;
-          font-style: italic;
-          margin: 12px 0;
-        }
+    h2 {
+      font-size: 24px;
+      font-weight: 900;
+      margin: 12px 0;
+    }
 
-        h4 {
-          font-size: clamp(16px, 4vw, 20px);
-          color: var(--white);
-          font-weight: 500;
-          margin: 12px 0;
-        }
+    h3 {
+      font-size: 18px;
+      font-weight: 500;
+      font-style: italic;
+      margin: 12px 0;
 
-        ul {
-          padding-inline-start: 15px;
-        }
+      span {
+        font-weight: 900;
+      }
+    }
 
-        li,
-        p {
-          margin: 10px auto;
-          font-size: clamp(14px, 3vw, 18px);
-          font-weight: 400;
-        }
+    .grade {
+      display:inline-block;
+      padding: 4px 8px;
+      border: 2px solid var(--lightGrey);
+      border-radius: 5px;
+      margin: 12px auto;
+      font-size: 20px;
+      font-weight: 900;
+    }
 
-        span {
-          color: var(--white);
-          font-weight: 900;
-          text-decoration: underline;
-        }
+    ul {
+      padding-inline-start: 15px;
+    }
 
-        .icons {
-          display: flex;
-          justify-content: center;
-          text-align: center;
-          margin: 30px auto;
+    li,
+    p {
+      margin: 10px auto;
+      font-size: 16px;
+      font-weight: 400;
+      text-align: left;
+      line-height: 1.3em;
+    }
+  }
 
-          @media (max-width: 600px) {
-            margin: 15px auto;
-          }
+  .icons {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 30px auto;
 
-          .icon {
-            margin: 0 20px;
-            color: var(--myYellow);
+    @media (max-width: 600px) {
+      margin: 15px auto;
+    }
 
-            &:hover,
-            &:focus {
-              transform: translateY(-3px);
-            }
-            
-            svg {              
-              width: 40px;
-              height: 40px;
+    .icon {
+      margin: 0 20px;
+      color: var(--myYellow);
+      
+      svg {              
+        width: 40px;
+        height: 40px;
 
-              @media (max-width: 600px) {
-                width: 30px;
-                height: 30px;
-              }
-            }
-          }
+        @media (max-width: 600px) {
+          width: 30px;
+          height: 30px;
         }
       }
     }
@@ -294,33 +292,35 @@ export const GlobalStyle = createGlobalStyle`
     &:hover,
     &:focus {
       color: var(--paradisePink);
-    }
-
-    &.inline-link {
-      ${({ theme }) => theme.mixins.inlineLink};
+      transform: translateY(-3px);
     }
   }
 
-  .skip-to-content {
-    ${({ theme }) => theme.mixins.button};
-    position: absolute;
-    top: auto;
-    left: -999px;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    z-index: -99;
+  .button {
+    margin: 20px auto 10px;;
+    width: 150px;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    align-items: center;
+    color: var(--myYellow);
+    padding: 6px 10px;
+    border: 1px solid var(--myYellow);
+    border-radius: 4px;
+    background-color: var(--midnightBlue);
+    box-shadow: 0px 6px 6px -3px rgb(0 0 0 / 20%),
+      0px 10px 14px 1px rgb(0 0 0 / 14%), 0px 4px 18px 3px rgb(0 0 0 / 12%);
+    font-size: 20px;
 
-    &:focus,
-    &:active {
-      background-color: var(--paradisePink);
-      color: var(--navy);
-      top: 0;
-      left: 0;
-      width: auto;
-      height: auto;
-      overflow: auto;
-      z-index: 99;
+    &:hover,
+    &:focus {
+      transform: translateY(-3px);
+      color: var(--paradisePink);
+    }
+
+    .icon {
+      height: 30px;
+      width: 30px;
     }
   }
 

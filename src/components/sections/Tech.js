@@ -1,9 +1,9 @@
 import React, { useRef, useEffect } from "react";
 import styled from "styled-components";
-import sr from "../utils/sr";
-import { srConfig } from "../config";
+import sr from "../../utils/sr";
+import { srConfig } from "../../config";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import CSharpIcon from "./icons/CSharpIcon";
+import CSharpIcon from "../icons/CSharpIcon";
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";

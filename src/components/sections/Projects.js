@@ -1,10 +1,10 @@
 import React, { useRef, useEffect } from "react";
 import styled from "styled-components";
-import sr from "../utils/sr";
-import { srConfig } from "../config";
+import sr from "../../utils/sr";
+import { srConfig } from "../../config";
 import { StaticImage } from "gatsby-plugin-image";
-import GitHubIcon from "./icons/GitHubIcon";
-import ExternalLinkIcon from "./icons/ExternalLinkIcon";
+import GitHubIcon from "../icons/GitHubIcon";
+import ExternalLinkIcon from "../icons/ExternalLinkIcon";
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";

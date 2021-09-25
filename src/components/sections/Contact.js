@@ -1,10 +1,10 @@
 import React, { useRef, useEffect } from "react";
 import styled from "styled-components";
-import sr from "../utils/sr";
-import { srConfig } from "../config";
-import EmailIcon from "./icons/EmailIcon";
-import { email, socialMedia } from "../config";
-import Icon from "./icons/Icon";
+import sr from "../../utils/sr";
+import { srConfig } from "../../config";
+import EmailIcon from "../icons/EmailIcon";
+import { email, socialMedia } from "../../config";
+import Icon from "../icons/Icon";
 
 const StyledSocialList = styled.ul`
   width: 260px;
@@ -46,14 +46,6 @@ const Wrapper = styled.section`
     margin: 0 auto 50px;
   }
 
-  h1 {
-    margin: 0 0 30px;
-    color: var(--myYellow);
-    font-family: "Roboto";
-    font-size: clamp(28px, 6vw, 36px);
-    font-weight: 600;
-  }
-
   .content {
     p {
       margin: 0 0 40px;
@@ -65,7 +57,7 @@ const Wrapper = styled.section`
       text-align: center;
     }
 
-    .button {
+    .emailButton {
       display: flex;
       justify-content: space-between;
       gap: 10px;
@@ -97,13 +89,13 @@ const Contact = () => {
 
   return (
     <Wrapper id="contact" ref={revealContainer}>
-      <h1>Contact</h1>
+      <div className="section-header">Contact</div>
       <div className="content">
         <p>
           I am always open to discussing new opportunities. Please feel free to
           get in touch.
         </p>
-        <a className="button" href={`mailto:${email}`}>
+        <a className="emailButton" href={`mailto:${email}`}>
           Email me
           <EmailIcon />
         </a>

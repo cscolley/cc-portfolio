@@ -1,9 +1,9 @@
 import React, { useRef, useEffect } from "react";
 import styled from "styled-components";
-import sr from "../utils/sr";
-import { srConfig } from "../config";
+import sr from "../../utils/sr";
+import { srConfig } from "../../config";
 import { StaticImage } from "gatsby-plugin-image";
-import GoogleScholarIcon from "./icons/GoogleScholarIcon";
+import GoogleScholarIcon from "../icons/GoogleScholarIcon";
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -28,33 +28,6 @@ if (typeof window !== "undefined") {
 
 const Wrapper = styled.section`
   max-width: 900px;
-
-  .button {
-    width: 150px;
-    display: flex;
-    justify-content: space-between;
-    gap: 10px;
-    align-items: center;
-    color: var(--myYellow);
-    padding: 6px 10px;
-    border: 1px solid var(--myYellow);
-    border-radius: 4px;
-    background-color: var(--midnightBlue);
-    box-shadow: 0px 6px 6px -3px rgb(0 0 0 / 20%),
-      0px 10px 14px 1px rgb(0 0 0 / 14%), 0px 4px 18px 3px rgb(0 0 0 / 12%);
-    font-size: 20px;
-
-    &:hover,
-    &:focus {
-      transform: translateY(-3px);
-      color: var(--paradisePink);
-    }
-
-    .icon {
-      height: 30px;
-      width: 30px;
-    }
-  }
 `;
 
 const Education = () => {
@@ -85,16 +58,18 @@ const Education = () => {
             </div>
             <div className="myText">
               <h2>
-                Master of Information Technology (Software Development major)
+                Master of Information Technology (Software Development Major)
               </h2>
-              <h3>Swinburne Univerity of Technology, Melbourne, Australia</h3>
-              <h4>(Graduated 2021)</h4>
+              <h3>
+                Swinburne Univerity of Technology, Melbourne, Australia <span>(2021)</span>
+              </h3>
+              <div className="grade">3.67 GPA</div>
               <ul>
                 <li>
-                  I achieved an exceptionally high{" "}
-                  <span>3.67 Grade Point Average</span> across all subjects and
-                  I have received multiple scholarship awards, recognising both
-                  project and individual student achievements.
+                  I achieved an exceptionally high 3.67 Grade Point Average
+                  (GPA) across all subjects and I have received multiple
+                  scholarship awards, recognising both project and individual
+                  student achievements.
                 </li>
                 <li>
                   I delivered practical real-world projects as well as applying
@@ -117,8 +92,7 @@ const Education = () => {
             </div>
             <div className="myText">
               <h2>Doctor of Philosophy - PhD Chemistry</h2>
-              <h3>University of Nottingham, UK</h3>
-              <h4>(Graduated 2001)</h4>
+              <h3>University of Nottingham, UK <span>(2001)</span></h3>
               <ul>
                 <li>
                   Thesis Title: Time Resolved Infrared Spectroscopy of Organic
@@ -131,7 +105,7 @@ const Education = () => {
               >
                 Publications
                 <div className="icon">
-                <GoogleScholarIcon />
+                  <GoogleScholarIcon />
                 </div>
               </a>
             </div>
@@ -149,10 +123,9 @@ const Education = () => {
             </div>
             <div className="myText">
               <h2>BSc Honours Chemistry</h2>
-              <h3>University of Nottingham, UK</h3>
-              <h4>(Graduated 1997)</h4>
+              <h3>University of Nottingham, UK <span>(1997)</span></h3>
+              <div className="grade">First Class</div>
               <ul>
-                <li>Achieved First Class</li>
                 <li>
                   Received Multiple Awards for outstanding academic performance
                 </li>
