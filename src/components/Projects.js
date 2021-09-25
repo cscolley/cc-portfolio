@@ -130,7 +130,7 @@ const Projects = () => {
                   Technology used:
                   <ul>
                     <li>React</li>
-                    <li>Material-UI</li>
+                    <li>Styled-Components</li>
                   </ul>
                 </li>
               </ul>

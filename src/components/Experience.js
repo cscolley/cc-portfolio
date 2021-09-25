@@ -3,6 +3,7 @@ import styled from "styled-components";
 import sr from "../utils/sr";
 import { srConfig } from "../config";
 import { StaticImage } from "gatsby-plugin-image";
+import GoogleScholarIcon from "./icons/GoogleScholarIcon";
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -27,6 +28,50 @@ if (typeof window !== "undefined") {
 
 const Wrapper = styled.section`
   max-width: 900px;
+
+  .button {
+    width: 150px;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    align-items: center;
+    color: var(--myYellow);
+    padding: 6px 10px;
+    border: 1px solid var(--myYellow);
+    border-radius: 4px;
+    background-color: var(--midnightBlue);
+    box-shadow: 0px 6px 6px -3px rgb(0 0 0 / 20%),
+      0px 10px 14px 1px rgb(0 0 0 / 14%), 0px 4px 18px 3px rgb(0 0 0 / 12%);
+    font-size: 20px;
+
+    &:hover,
+    &:focus {
+      transform: translateY(-3px);
+      color: var(--paradisePink);
+    }
+
+    .icon {
+      height: 30px;
+      width: 30px;
+    }
+  }
+`;
+
+const LogoGrid = styled.div`
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 30px;
+  justify-items: center;
+  align-items: start;
+
+  .logo {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 5px;
+  }
 `;
 
 const Experience = () => {
@@ -143,6 +188,67 @@ const Experience = () => {
                   teams.
                 </li>
               </ul>
+            </div>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className="content">
+            <LogoGrid>
+              <div>
+                <StaticImage
+                  className="logo"
+                  src="../images/university-college-london-logo.png"
+                  alt="University College London Logo"
+                  formats={["AUTO", "WEBP", "AVIF"]}
+                />
+              </div>
+              <div>
+                <StaticImage
+                  className="logo"
+                  src="../images/Imperial-College-London-400x196.jpg"
+                  alt="Imperial College London Logo"
+                  formats={["AUTO", "WEBP", "AVIF"]}
+                />
+              </div>
+              <div>
+                <StaticImage
+                  className="logo"
+                  src="../images/RMIT-university-logo.jpg"
+                  alt="RMIT University Logo"
+                  formats={["AUTO", "WEBP", "AVIF"]}
+                />
+              </div>
+              <div>
+                <StaticImage
+                  className="logo"
+                  src="../images/monash-university-logo.png"
+                  alt="Monash University Logo"
+                  formats={["AUTO", "WEBP", "AVIF"]}
+                />
+              </div>
+            </LogoGrid>
+            <div className="myText">
+              <h2>Post-Doctoral Research Associate Positions</h2>
+              <h3>
+                University College London, Imperial College London, RMIT
+                University, Monash University
+              </h3>
+              <h4>(May 2001 - Oct 2007)</h4>
+              <ul>
+                <li>
+                  My research largely focused on biomedical applications of
+                  infrared spectroscopy
+                </li>
+              </ul>
+              <a
+                className="button"
+                href="https://scholar.google.com.au/citations?hl=en&user=5CvP1vwAAAAJ"
+              >
+                Publications
+                <div className="icon">
+                  <GoogleScholarIcon />
+                </div>
+              </a>
             </div>
           </div>
         </SwiperSlide>
