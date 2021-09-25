@@ -9,6 +9,13 @@ module.exports = {
   },
   // pathPrefix: "/cc-portfolio",
   plugins: [
+    {
+      resolve: "gatsby-plugin-google-tagmanager",
+      options: {
+        id: "GTM-MRCLBWJ",
+        includeInDevelopment: false,
+      },
+    },
     "gatsby-plugin-styled-components",
     "gatsby-plugin-gatsby-cloud",
     "gatsby-plugin-image",

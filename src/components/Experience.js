@@ -58,19 +58,29 @@ const Wrapper = styled.section`
 `;
 
 const LogoGrid = styled.div`
-  width: 100%;
+  margin: 20px 0;
+  width: 80%;
   height: auto;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
   gap: 30px;
   justify-items: center;
-  align-items: start;
+  align-items: center;
 
-  .logo {
-    max-width: 100%;
-    max-height: 100%;
+  .logoDiv {
+    height: 100%;
+    width: 100%;
+    background-color: var(--lightGrey);
     border-radius: 5px;
+    padding: 6px;
+    display: flex;
+    align-items: center;
+
+    .logo {
+      max-width: 100%;
+      max-height: 100%;
+    }
   }
 `;
 
@@ -194,7 +204,7 @@ const Experience = () => {
         <SwiperSlide>
           <div className="content">
             <LogoGrid>
-              <div>
+              <div className="logoDiv">
                 <StaticImage
                   className="logo"
                   src="../images/university-college-london-logo.png"
@@ -202,7 +212,7 @@ const Experience = () => {
                   formats={["AUTO", "WEBP", "AVIF"]}
                 />
               </div>
-              <div>
+              <div className="logoDiv">
                 <StaticImage
                   className="logo"
                   src="../images/Imperial-College-London-400x196.jpg"
@@ -210,7 +220,7 @@ const Experience = () => {
                   formats={["AUTO", "WEBP", "AVIF"]}
                 />
               </div>
-              <div>
+              <div className="logoDiv">
                 <StaticImage
                   className="logo"
                   src="../images/RMIT-university-logo.jpg"
@@ -218,7 +228,7 @@ const Experience = () => {
                   formats={["AUTO", "WEBP", "AVIF"]}
                 />
               </div>
-              <div>
+              <div className="logoDiv">
                 <StaticImage
                   className="logo"
                   src="../images/monash-university-logo.png"
