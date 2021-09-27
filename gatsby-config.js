@@ -2,10 +2,11 @@ module.exports = {
   siteMetadata: {
     title: 'Chris Colley - Web Developer',
     description:
-      'My Web Developer Portfolio. More exciting content coming soon!',
+      'Chris Colley Web Developer Portfolio. More exciting content coming soon!',
     siteUrl: 'https://www.chriscolley.com.au', // No trailing slash allowed!
     image: '/og-image.png', // Path to your image you placed in the 'static' folder
     twitterUsername: '@chriscolleyau',
+    keywords: 'portfolio, web developer, react, javascript, aws',
   },
   // pathPrefix: "/cc-portfolio",
   plugins: [
@@ -20,7 +21,7 @@ module.exports = {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
         host: 'https://www.chriscolley.com.au',
-        sitemap: 'https://www.chriscolley.com.au/sitemap.xml',
+        sitemap: 'https://www.chriscolley.com.au/sitemap/sitemap-0.xml',
         policy: [{ userAgent: '*', allow: '/' }]
       }
     },
