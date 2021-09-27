@@ -78,7 +78,7 @@ const Experience = () => {
             <div className="image">
               <StaticImage
                 className="img"
-                src="../images/agilent-technologies-logo.jpg"
+                src="../../images/agilent-technologies-logo.jpg"
                 alt="Agilent Technologies Logo"
                 formats={["AUTO", "WEBP", "AVIF"]}
               />
@@ -110,7 +110,7 @@ const Experience = () => {
             <div className="image">
               <StaticImage
                 className="img"
-                src="../images/agilent-technologies-logo.jpg"
+                src="../../images/agilent-technologies-logo.jpg"
                 alt="Agilent Technologies Logo"
                 formats={["AUTO", "WEBP", "AVIF"]}
               />
@@ -146,7 +146,7 @@ const Experience = () => {
             <div className="image">
               <StaticImage
                 className="img"
-                src="../images/agilent-technologies-logo.jpg"
+                src="../../images/agilent-technologies-logo.jpg"
                 alt="Agilent Technologies Logo"
                 formats={["AUTO", "WEBP", "AVIF"]}
               />
@@ -180,7 +180,7 @@ const Experience = () => {
               <div className="logoDiv">
                 <StaticImage
                   className="logo"
-                  src="../images/university-college-london-logo.png"
+                  src="../../images/university-college-london-logo.png"
                   alt="University College London Logo"
                   formats={["AUTO", "WEBP", "AVIF"]}
                 />
@@ -188,7 +188,7 @@ const Experience = () => {
               <div className="logoDiv">
                 <StaticImage
                   className="logo"
-                  src="../images/Imperial-College-London-400x196.jpg"
+                  src="../../images/Imperial-College-London-400x196.jpg"
                   alt="Imperial College London Logo"
                   formats={["AUTO", "WEBP", "AVIF"]}
                 />
@@ -196,7 +196,7 @@ const Experience = () => {
               <div className="logoDiv">
                 <StaticImage
                   className="logo"
-                  src="../images/RMIT-university-logo.jpg"
+                  src="../../images/RMIT-university-logo.jpg"
                   alt="RMIT University Logo"
                   formats={["AUTO", "WEBP", "AVIF"]}
                 />
@@ -204,7 +204,7 @@ const Experience = () => {
               <div className="logoDiv">
                 <StaticImage
                   className="logo"
-                  src="../images/monash-university-logo.png"
+                  src="../../images/monash-university-logo.png"
                   alt="Monash University Logo"
                   formats={["AUTO", "WEBP", "AVIF"]}
                 />

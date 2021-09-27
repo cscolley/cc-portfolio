@@ -51,7 +51,7 @@ const Education = () => {
             <div className="image">
               <StaticImage
                 className="img"
-                src="../images/1200px-Logo_of_Swinburne_University_of_Technology.svg"
+                src="../../images/1200px-Logo_of_Swinburne_University_of_Technology.svg"
                 alt="Swinburne University of Technology Logo"
                 formats={["AUTO", "WEBP", "AVIF"]}
               />
@@ -85,7 +85,7 @@ const Education = () => {
             <div className="image">
               <StaticImage
                 className="img"
-                src="../images/university-of-nottingham-vector-logo copy-01.svg"
+                src="../../images/university-of-nottingham-vector-logo copy-01.svg"
                 alt="University of Nottingham Logo"
                 formats={["AUTO", "WEBP", "AVIF"]}
               />
@@ -116,7 +116,7 @@ const Education = () => {
             <div className="image">
               <StaticImage
                 className="img"
-                src="../images/university-of-nottingham-vector-logo copy-01.svg"
+                src="../../images/university-of-nottingham-vector-logo copy-01.svg"
                 alt="University of Nottingham Logo"
                 formats={["AUTO", "WEBP", "AVIF"]}
               />

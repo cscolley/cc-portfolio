@@ -82,7 +82,7 @@ const About = () => {
         <PhotoDiv>
           <StaticImage
             className="img"
-            src="../images/PhotoOfMeSmaller.jpg"
+            src="../../images/PhotoOfMeSmaller.jpg"
             alt="Photo of Chris Colley"
             formats={["AUTO", "WEBP", "AVIF"]}
           />

@@ -69,7 +69,7 @@ const Projects = () => {
             <ProjectScreenshotDiv>
               <StaticImage
                 className="img"
-                src="../images/pomodoro-screenshot.png"
+                src="../../images/pomodoro-screenshot.png"
                 alt="Pomodoro Timer Web App Screenshot"
                 formats={["AUTO", "WEBP", "AVIF"]}
               />
@@ -114,7 +114,7 @@ const Projects = () => {
             <ProjectScreenshotDiv>
               <StaticImage
                 className="img"
-                src="../images/calculator-screenshot.png"
+                src="../../images/calculator-screenshot.png"
                 alt="Calculator Web App Screenshot"
                 formats={["AUTO", "WEBP", "AVIF"]}
               />
