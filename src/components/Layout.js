@@ -5,7 +5,6 @@ import styled, { ThemeProvider } from "styled-components";
 import Loader from "./Loader";
 import Head from "./Head";
 import Nav from "./Nav";
-import "@fontsource/gloria-hallelujah";
 import "@fontsource/roboto";
 import Social from "./Social";
 import Email from "./Email";

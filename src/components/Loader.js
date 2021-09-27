@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
-import "@fontsource/roboto";
-import SearchIcon from "../images/search-solid.svg";
 import Logo from "./icons/Logo";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -112,7 +110,7 @@ const Loader = ({ finishLoading }) => {
         <Content
           initial={{ opacity: 1 }}
           animate={{ opacity: 0 }}
-          transition={{ delay: 5.1, duration: 0.3, ease: "easeOut" }}
+          transition={{ delay: 5.6, duration: 0.3, ease: "easeOut" }}
           onAnimationComplete={finishLoading}
         >
           <InputDiv
@@ -132,7 +130,6 @@ const Loader = ({ finishLoading }) => {
               }}
             >
               <FontAwesomeIcon icon={["fas", "search"]} />
-              {/* <img src={SearchIcon} alt="Search Icon" height="100%" /> */}
             </ImgDiv>
             {text}
             <Cursor
@@ -153,7 +150,7 @@ const Loader = ({ finishLoading }) => {
             }}
             transition={{
               delay: 3.3,
-              duration: 1.4,
+              duration: 2,
               type: "spring",
               bounce: 0.6,
             }}
