@@ -14,6 +14,7 @@ export const GlobalStyle = createGlobalStyle`
         url(${Digital7MonoWoff}) format('woff');
         font-weight: 400;
         font-style: normal;
+        font-display: swap;
     }
 
     :root {
