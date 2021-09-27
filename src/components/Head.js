@@ -6,7 +6,7 @@ import { useStaticQuery, graphql } from "gatsby";
 
 // Instructions on how to do this taken from https://www.gatsbyjs.com/docs/add-seo-component/
 
-const SEO = ({ title, description, image, article }) => {
+const Head = ({ title, description, image, article }) => {
   const { pathname } = useLocation();
   const { site } = useStaticQuery(query);
 
@@ -26,13 +26,14 @@ const SEO = ({ title, description, image, article }) => {
   };
 
   return (
-    <Helmet title={seo.title}>
+    <Helmet title={title} defaultTitle={seo.title} titleTemplate={`%s | ${defaultTitle}`}>
+      <html lang="en" />
       <meta name="description" content={seo.description} />
       <meta name="image" content={seo.image} />
 
       {seo.url && <meta property="og:url" content={seo.url} />}
 
-      {(article ? true : null) && <meta property="og:type" content="article" />}
+      <meta property="og:type" content="website" />
 
       {seo.title && <meta property="og:title" content={seo.title} />}
 
@@ -41,8 +42,8 @@ const SEO = ({ title, description, image, article }) => {
       )}
 
       {seo.image && <meta property="og:image" content={seo.image} />}
-      {seo.image && <meta property="og:image:width" content="250" />}
-      {seo.image && <meta property="og:image:height" content="151" />}
+      {/* {seo.image && <meta property="og:image:width" content="250" />}
+      {seo.image && <meta property="og:image:height" content="151" />} */}
 
       <meta name="twitter:card" content="summary_large_image" />
 
@@ -57,24 +58,24 @@ const SEO = ({ title, description, image, article }) => {
       )}
 
       {seo.image && <meta name="twitter:image" content={seo.image} />}
+
+      <meta name="google-site-verification" content="IaUFn9c-keZscipcXaeN3iWXRKu6MBFt-e7xW0z1bcI" />
     </Helmet>
   );
 };
 
-export default SEO;
+export default Head;
 
-SEO.propTypes = {
+Head.propTypes = {
   title: PropTypes.string,
   description: PropTypes.string,
   image: PropTypes.string,
-  article: PropTypes.bool,
 };
 
-SEO.defaultProps = {
+Head.defaultProps = {
   title: null,
   description: null,
   image: null,
-  article: false,
 };
 
 const query = graphql`
@@ -83,7 +84,7 @@ const query = graphql`
       siteMetadata {
         defaultTitle: title
         defaultDescription: description
-        siteUrl
+        siteUrl: url
         defaultImage: image
         twitterUsername
       }
