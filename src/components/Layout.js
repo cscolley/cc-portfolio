@@ -21,7 +21,7 @@ if (typeof window !== "undefined") {
   require("smooth-scroll")('a[href*="#"]');
 }
 
-export const Content = styled.div`
+const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -69,15 +69,19 @@ const Layout = ({ children, location }) => {
       <div id="root">
         <ThemeProvider theme={theme}>
           <GlobalStyle />
+
+          <a className="skip-to-content" href="#content">
+            Skip to Content
+          </a>
           {isLoading && isHome ? (
             <Loader finishLoading={() => setIsLoading(false)} />
           ) : (
-            <Content>
+            <Wrapper>
               <Nav isHome={isHome} />
               <Social />
               <Email />
-              <div>{children}</div>
-            </Content>
+              <div id="content">{children}</div>
+            </Wrapper>
           )}
         </ThemeProvider>
       </div>
