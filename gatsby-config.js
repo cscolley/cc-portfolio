@@ -16,6 +16,14 @@ module.exports = {
         includeInDevelopment: false,
       },
     },
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://www.chriscolley.com.au',
+        sitemap: 'https://www.chriscolley.com.au/sitemap.xml',
+        policy: [{ userAgent: '*', allow: '/' }]
+      }
+    },
     "gatsby-plugin-styled-components",
     "gatsby-plugin-gatsby-cloud",
     "gatsby-plugin-image",
