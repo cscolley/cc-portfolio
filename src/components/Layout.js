@@ -61,7 +61,7 @@ const Layout = ({ children, location }) => {
     }
 
     handleExternalLinks();
-  }, [isLoading]);
+  }, [isLoading, location.hash]);
 
   return (
     <>

@@ -12,7 +12,7 @@ export const GlobalStyle = createGlobalStyle`
         url(${Digital7MonoTtf}) format('truetype'),
         url(${Digital7MonoWoff2}) format('woff2'),
         url(${Digital7MonoWoff}) format('woff');
-        font-weight: 300;
+        font-weight: 400;
         font-style: normal;
     }
 

@@ -94,7 +94,7 @@ const Loader = ({ finishLoading }) => {
         setText((t) => t + myText[i]);
         setTimeout(() => {
           delayedText(++i, myText);
-        }, 100);
+        }, 40);
       } else return;
     };
 
@@ -110,13 +110,13 @@ const Loader = ({ finishLoading }) => {
         <Content
           initial={{ opacity: 1 }}
           animate={{ opacity: 0 }}
-          transition={{ delay: 5.6, duration: 0.3, ease: "easeOut" }}
+          transition={{ delay: 2.5, duration: 0.1, ease: "easeOut" }}
           onAnimationComplete={finishLoading}
         >
           <InputDiv
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 1, ease: "easeIn" }}
+            transition={{ duration: 0.1, ease: "easeIn" }}
             onAnimationComplete={() => setIsTyping(true)}
           >
             <ImgDiv
@@ -125,8 +125,8 @@ const Loader = ({ finishLoading }) => {
                 scale: [1, 1.6, 1],
               }}
               transition={{
-                delay: 2.9,
-                duration: 0.3,
+                delay: 0.8,
+                duration: 0.2,
               }}
             >
               <FontAwesomeIcon icon={["fas", "search"]} />
@@ -135,7 +135,7 @@ const Loader = ({ finishLoading }) => {
             <Cursor
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ delay: 1, duration: 1, ease: "easeIn", repeat: Infinity }}
+              transition={{ delay: 0.1, duration: 0.8, ease: "easeIn", repeat: Infinity }}
             >|</Cursor>
           </InputDiv>
           <LogoDiv
@@ -149,8 +149,8 @@ const Loader = ({ finishLoading }) => {
               rotate: 360,
             }}
             transition={{
-              delay: 3.3,
-              duration: 2,
+              delay: 1,
+              duration: 1.5,
               type: "spring",
               bounce: 0.6,
             }}
