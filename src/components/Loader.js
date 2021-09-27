@@ -112,7 +112,7 @@ const Loader = ({ finishLoading }) => {
         <Content
           initial={{ opacity: 1 }}
           animate={{ opacity: 0 }}
-          transition={{ delay: 5.6, duration: 0.3, ease: "easeOut" }}
+          transition={{ delay: 5.1, duration: 0.3, ease: "easeOut" }}
           onAnimationComplete={finishLoading}
         >
           <InputDiv
@@ -153,7 +153,7 @@ const Loader = ({ finishLoading }) => {
             }}
             transition={{
               delay: 3.3,
-              duration: 2,
+              duration: 1.4,
               type: "spring",
               bounce: 0.6,
             }}
