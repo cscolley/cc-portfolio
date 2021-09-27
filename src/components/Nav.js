@@ -6,7 +6,7 @@ import styled, { css } from "styled-components";
 import { navLinks } from "../config";
 import { loaderDelay } from "../utils";
 import useScrollDirection from "../hooks/useScrollDirection";
-import Menu from "./menu";
+import Menu from "./Menu";
 import Logo from "./icons/Logo";
 import "@fontsource/gloria-hallelujah";
 import "@fontsource/roboto";
