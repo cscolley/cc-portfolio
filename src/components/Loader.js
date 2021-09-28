@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 import Logo from "./icons/Logo";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
 const Wrapper = styled.div`
   display: flex;
@@ -129,7 +130,7 @@ const Loader = ({ finishLoading }) => {
                 duration: 0.2,
               }}
             >
-              <FontAwesomeIcon icon="search" />
+              <FontAwesomeIcon icon={faSearch} />
             </ImgDiv>
             {text}
             <Cursor

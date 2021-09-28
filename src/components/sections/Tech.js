@@ -4,6 +4,15 @@ import sr from "../../utils/sr";
 import { srConfig } from "../../config";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import CSharpIcon from "../icons/CSharpIcon";
+import {
+  faReact,
+  faJsSquare,
+  faAws,
+  faHtml5,
+  faCss3Alt,
+  faPhp,
+  faJava,
+} from "@fortawesome/free-brands-svg-icons";
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -14,7 +23,6 @@ import "swiper/css/pagination";
 
 // import Swiper core and required modules
 import SwiperCore, {
-  Navigation,
   Pagination,
   Mousewheel,
   Keyboard,
@@ -88,7 +96,7 @@ const Tech = () => {
       <div className="section-header">Tech I'm skilled with...</div>
       <Swiper
         pagination={{
-          "clickable": true
+          clickable: true,
         }}
         mousewheel={true}
         keyboard={true}
@@ -114,43 +122,43 @@ const Tech = () => {
       >
         <SwiperSlide className="tech-swiper-slide">
           <div className="tech-content">
-            <FontAwesomeIcon icon={["fab", "react"]} size="6x" />
+            <FontAwesomeIcon icon={faReact} size="6x" />
             <TechName>React</TechName>
           </div>
         </SwiperSlide>
         <SwiperSlide className="tech-swiper-slide">
           <div className="tech-content">
-            <FontAwesomeIcon icon={["fab", "js-square"]} size="6x" />
+            <FontAwesomeIcon icon={faJsSquare} size="6x" />
             <TechName>JavaScript</TechName>
           </div>
         </SwiperSlide>
         <SwiperSlide className="tech-swiper-slide">
           <div className="tech-content">
-            <FontAwesomeIcon icon={["fab", "aws"]} size="6x" />
+            <FontAwesomeIcon icon={faAws} size="6x" />
             <TechName>AWS</TechName>
           </div>
         </SwiperSlide>
         <SwiperSlide className="tech-swiper-slide">
           <div className="tech-content">
-            <FontAwesomeIcon icon={["fab", "html5"]} size="6x" />
+            <FontAwesomeIcon icon={faHtml5} size="6x" />
             <TechName>HTML5</TechName>
           </div>
         </SwiperSlide>
         <SwiperSlide className="tech-swiper-slide">
           <div className="tech-content">
-            <FontAwesomeIcon icon={["fab", "css3-alt"]} size="6x" />
+            <FontAwesomeIcon icon={faCss3Alt} size="6x" />
             <TechName>CSS3</TechName>
           </div>
         </SwiperSlide>
         <SwiperSlide className="tech-swiper-slide">
           <div className="tech-content">
-            <FontAwesomeIcon icon={["fab", "php"]} size="6x" />
+            <FontAwesomeIcon icon={faPhp} size="6x" />
             <TechName>PHP</TechName>
           </div>
         </SwiperSlide>
         <SwiperSlide className="tech-swiper-slide">
           <div className="tech-content">
-            <FontAwesomeIcon icon={["fab", "java"]} size="6x" />
+            <FontAwesomeIcon icon={faJava} size="6x" />
             <TechName>Java</TechName>
           </div>
         </SwiperSlide>

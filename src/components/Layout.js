@@ -8,11 +8,6 @@ import Nav from "./Nav";
 import "@fontsource/roboto";
 import Social from "./Social";
 import Email from "./Email";
-import { library } from "@fortawesome/fontawesome-svg-core";
-import { fab } from "@fortawesome/free-brands-svg-icons";
-import { faSearch } from '@fortawesome/free-solid-svg-icons';
-
-library.add(fab, faSearch);
 
 // https://medium.com/@chrisfitkin/how-to-smooth-scroll-links-in-gatsby-3dc445299558
 if (typeof window !== "undefined") {
