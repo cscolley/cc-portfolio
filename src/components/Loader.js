@@ -129,7 +129,7 @@ const Loader = ({ finishLoading }) => {
                 duration: 0.2,
               }}
             >
-              <FontAwesomeIcon icon={["fas", "search"]} />
+              <FontAwesomeIcon icon="search" />
             </ImgDiv>
             {text}
             <Cursor

@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "gatsby";
+import { faSmileWink } from "@fortawesome/free-regular-svg-icons";
 
 const Wrapper = styled(motion.section)`
   ${({ theme }) => theme.mixins.flexCenter};
@@ -104,7 +105,7 @@ const four = (
 const five = (
   <Link className="contactMeButton" to="/#contact">
     Contact Me
-    <FontAwesomeIcon icon={["far", "smile-wink"]} />
+    <FontAwesomeIcon icon={faSmileWink} />
   </Link>
 )
 
