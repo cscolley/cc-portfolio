@@ -33,7 +33,10 @@ const Wrapper = styled.section`
 
 const ProjectScreenshotDiv = styled.div`
   position: relative;
+  width: auto;
+  height: auto;
   max-width: 450px;
+  max-height: 450px;
   margin: 20px auto;
   background-color: var(--white);
   border: 2px solid var(--white);
@@ -41,6 +44,8 @@ const ProjectScreenshotDiv = styled.div`
 
   img {
     border-radius: 5px;
+    max-width: 450px;
+    max-height: 450px;
   }
 
   @media (max-width: 768px) {
@@ -66,14 +71,59 @@ const Projects = () => {
       >
         <SwiperSlide>
           <div className="content">
-            <ProjectScreenshotDiv>
-              <StaticImage
-                className="img"
-                src="../../images/pomodoro-screenshot.png"
-                alt="Pomodoro Timer Web App Screenshot"
-                formats={["AUTO", "WEBP", "AVIF"]}
-              />
-            </ProjectScreenshotDiv>
+            <a href="https://cscolley.github.io/markdown-previewer/">
+              <ProjectScreenshotDiv>
+                <StaticImage
+                  className="img"
+                  src="../../images/markdown-previewer.png"
+                  alt="Markdown Previewer Web App Screenshot"
+                  formats={["AUTO", "WEBP", "AVIF"]}
+                />
+              </ProjectScreenshotDiv>
+            </a>
+            <div className="myText">
+              <h2>Markdown Previewer</h2>
+              <ul>
+                <li>
+                  I built this project as part of my FreeCodeCamp.org Front End
+                  Development Libraries Certification.
+                </li>
+                <li>Makes use of Markedjs, a markdown parser and compiler.</li>
+                <li>
+                  Technology used for this fully responsive web app:
+                  <ul>
+                    <li>React</li>
+                    <li>Styled-Components</li>
+                  </ul>
+                </li>
+              </ul>
+              <div className="icons">
+                <div className="icon">
+                  <a href="https://github.com/cscolley/markdown-previewer">
+                    <GitHubIcon />
+                  </a>
+                </div>
+                <div className="icon">
+                  <a href="https://cscolley.github.io/markdown-previewer/">
+                    <ExternalLinkIcon />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className="content">
+            <a href="https://cscolley.github.io/pomodoro-timer/">
+              <ProjectScreenshotDiv>
+                <StaticImage
+                  className="img"
+                  src="../../images/pomodoro-screenshot.png"
+                  alt="Pomodoro Timer Web App Screenshot"
+                  formats={["AUTO", "WEBP", "AVIF"]}
+                />
+              </ProjectScreenshotDiv>
+            </a>
             <div className="myText">
               <h2>Pomodoro Timer</h2>
               <ul>
@@ -87,7 +137,7 @@ const Projects = () => {
                   relatively short sessions followed by repeated short breaks.
                 </li>
                 <li>
-                  Technology used:
+                  Technology used for this fully responsive web app:
                   <ul>
                     <li>React</li>
                     <li>Styled-Components</li>
@@ -111,14 +161,16 @@ const Projects = () => {
         </SwiperSlide>
         <SwiperSlide>
           <div className="content">
-            <ProjectScreenshotDiv>
-              <StaticImage
-                className="img"
-                src="../../images/calculator-screenshot.png"
-                alt="Calculator Web App Screenshot"
-                formats={["AUTO", "WEBP", "AVIF"]}
-              />
-            </ProjectScreenshotDiv>
+            <a href="https://cscolley.github.io/react-calculator/">
+              <ProjectScreenshotDiv>
+                <StaticImage
+                  className="img"
+                  src="../../images/calculator-screenshot.png"
+                  alt="Calculator Web App Screenshot"
+                  formats={["AUTO", "WEBP", "AVIF"]}
+                />
+              </ProjectScreenshotDiv>
+            </a>
             <div className="myText">
               <h2>Calculator</h2>
               <ul>
@@ -127,7 +179,7 @@ const Projects = () => {
                   Development Libraries Certification.
                 </li>
                 <li>
-                  Technology used:
+                  Technology used for this fully responsive web app:
                   <ul>
                     <li>React</li>
                     <li>Styled-Components</li>
@@ -142,6 +194,48 @@ const Projects = () => {
                 </div>
                 <div className="icon">
                   <a href="https://cscolley.github.io/react-calculator/">
+                    <ExternalLinkIcon />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className="content">
+            <a href="https://cscolley.github.io/material-ui-react-drum-machine/">
+              <ProjectScreenshotDiv>
+                <StaticImage
+                  className="img"
+                  src="../../images/drum-machine.png"
+                  alt="Drum Machine Web App Screenshot"
+                  formats={["AUTO", "WEBP", "AVIF"]}
+                />
+              </ProjectScreenshotDiv>
+            </a>
+            <div className="myText">
+              <h2>Drum Machine</h2>
+              <ul>
+                <li>
+                  I built this project as part of my FreeCodeCamp.org Front End
+                  Development Libraries Certification.
+                </li>
+                <li>
+                  Technology used for this fully responsive web app:
+                  <ul>
+                    <li>React</li>
+                    <li>Material-UI</li>
+                  </ul>
+                </li>
+              </ul>
+              <div className="icons">
+                <div className="icon">
+                  <a href="https://github.com/cscolley/material-ui-react-drum-machine/">
+                    <GitHubIcon />
+                  </a>
+                </div>
+                <div className="icon">
+                  <a href="https://cscolley.github.io/material-ui-react-drum-machine/">
                     <ExternalLinkIcon />
                   </a>
                 </div>
