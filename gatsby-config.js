@@ -6,7 +6,7 @@ module.exports = {
     siteUrl: 'https://www.chriscolley.com.au', // No trailing slash allowed!
     image: '/og-image.png', // Path to your image you placed in the 'static' folder
     twitterUsername: '@chriscolleyau',
-    keywords: 'portfolio, web developer, react, javascript, aws',
+    keywords: 'portfolio, web developer, react, javascript, aws, cloud',
   },
   // pathPrefix: "/cc-portfolio",
   plugins: [
@@ -31,9 +31,15 @@ module.exports = {
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sitemap",
     {
-      resolve: "gatsby-plugin-manifest",
+      resolve: `gatsby-plugin-manifest`,
       options: {
-        icon: "src/images/cc-portfolio-icon.jpg",
+        name: 'ChrisColley',
+        short_name: 'ChrisColley',
+        start_url: '/',
+        background_color:"#0d1163",
+        theme_color: "#0d1163",
+        display: 'minimal-ui',
+        icon: 'src/images/cc-portfolio-icon.png',
       },
     },
     "gatsby-transformer-remark",

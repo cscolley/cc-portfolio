@@ -243,6 +243,48 @@ const Projects = () => {
             </div>
           </div>
         </SwiperSlide>
+        <SwiperSlide>
+          <div className="content">
+            <a href="https://cscolley.github.io/random-quote-machine/">
+              <ProjectScreenshotDiv>
+                <StaticImage
+                  className="img"
+                  src="../../images/random-quote-machine.png"
+                  alt="Random Quote Machine Web App Screenshot"
+                  formats={["AUTO", "WEBP", "AVIF"]}
+                />
+              </ProjectScreenshotDiv>
+            </a>
+            <div className="myText">
+              <h2>Random Quote Machine</h2>
+              <ul>
+                <li>
+                  I built this project as part of my FreeCodeCamp.org Front End
+                  Development Libraries Certification.
+                </li>
+                <li>
+                  Technology used for this fully responsive web app:
+                  <ul>
+                    <li>Sass</li>
+                    <li>jQuery</li>
+                  </ul>
+                </li>
+              </ul>
+              <div className="icons">
+                <div className="icon">
+                  <a href="https://github.com/cscolley/random-quote-machine">
+                    <GitHubIcon />
+                  </a>
+                </div>
+                <div className="icon">
+                  <a href="https://cscolley.github.io/random-quote-machine/">
+                    <ExternalLinkIcon />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </SwiperSlide>
       </Swiper>
     </Wrapper>
   );
