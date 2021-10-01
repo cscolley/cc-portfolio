@@ -1,11 +1,12 @@
 <p align="center">
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
+  <a href="https://www.chriscolley.com.au">
+    <img alt="chriscolley.com.au logo" src="https://github.com/cscolley/cc-portfolio/blob/master/src/images/square-full-logo.jpg" width="60" />
   </a>
 </p>
 <h1 align="center">
-  Gatsby minimal starter
+  chriscolley.com.au
 </h1>
+![demo](/static/og-image.png)
 
 ## 🚀 Quick start
 
