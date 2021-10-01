@@ -4,9 +4,12 @@
   </a>
 </p>
 <h1 align="center">
-  chriscolley.com.au
+  <a href="https://www.chriscolley.com.au">
+    chriscolley.com.au
+  </a>  
 </h1>
-![demo](/static/og-image.png)
+
+![demo](static/og-image.png)
 
 ## 🚀 Quick start
 
